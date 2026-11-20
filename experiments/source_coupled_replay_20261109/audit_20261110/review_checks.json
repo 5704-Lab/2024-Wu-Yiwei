@@ -1,0 +1,152 @@
+{
+  "date": "2026-11-10",
+  "scope": "mathematical audit and synthetic counterexamples only; no model inference",
+  "passed": 11,
+  "total": 11,
+  "checks": [
+    {
+      "name": "zero_cycle_limit_is_not_original_FlowEdit",
+      "passed": true,
+      "time": 0.8,
+      "source_instance": 1.0,
+      "source_variance": 1.0,
+      "target_variance": 4.0,
+      "original_flowedit_expectation_output": 1.4960745371631432,
+      "partial_inverse_output": 1.843908891458578,
+      "absolute_difference": 0.34783435429543474,
+      "exact_source_cycle": 0.0,
+      "FE_expectation_computed_by_high_accuracy_ODE": true
+    },
+    {
+      "name": "small_source_cycle_not_small_edit_error_without_conditioning",
+      "passed": true,
+      "source_map_gain": 0.0001,
+      "inverse_source_L": 10000.0,
+      "cycle": 0.0001,
+      "corrected_output": 0.9999,
+      "reference_target": 0.0,
+      "error": 0.9999,
+      "conditional_bound": 0.9999000000000001
+    },
+    {
+      "name": "P5_bound_remains_correct_with_true_constants",
+      "passed": true
+    },
+    {
+      "name": "Heun_can_be_singular_while_ODE_is_invertible",
+      "passed": true,
+      "step": 0.1,
+      "heun_step_matrix_norm": 2.220446049250313e-16,
+      "different_inputs_output_distance": 1.2412670766236366e-16,
+      "exact_ODE_step_determinant": 0.1353352832366127,
+      "L1_source_cycle_rms": 2.1942709178604383e-17,
+      "candidate_status": "candidate_requires_task_evaluation",
+      "error_to_exact_inverse_target": 0.04695406709104457,
+      "quadrature_error_estimate": 8.512292695922314e-15,
+      "role": "analytic counterexample, not a measured FLUX failure"
+    },
+    {
+      "name": "source_gate_can_pass_bad_continuous_inverse_due_to_solver",
+      "passed": true
+    },
+    {
+      "name": "identity_control_cannot_detect_Heun_collapse",
+      "passed": true
+    },
+    {
+      "name": "Heun_colipschitz_sufficient_condition",
+      "passed": true,
+      "hL": 0.043471617258268064,
+      "lower_bound": 0.9555834919882072,
+      "minimum_realized_ratio": 0.9595541716870749
+    },
+    {
+      "name": "residual_correction_can_worsen_protected_factor",
+      "passed": true,
+      "source_cycle_rms": 0.007071067811865474,
+      "raw_target": [
+        1.0,
+        0.0
+      ],
+      "corrected_target": [
+        1.0,
+        -0.009999999999999998
+      ],
+      "protected_coordinate": 1,
+      "raw_protected_change": 0.0,
+      "corrected_protected_change": 0.009999999999999998,
+      "role": "analytic task with protected second coordinate, not a measured image result"
+    },
+    {
+      "name": "bounded_correction_identity_is_still_true",
+      "passed": true
+    },
+    {
+      "name": "local_orders_do_not_guarantee_high_horizon_accuracy",
+      "passed": true,
+      "T": 0.9,
+      "L1_error": 31.998234443686158,
+      "L2_error": 25.51823444368616
+    },
+    {
+      "name": "v1_development_gate_has_no_main_method_jobs",
+      "passed": true,
+      "missing_pair_ids": [
+        "bear__00",
+        "bus__00",
+        "cat__00",
+        "corgi__00"
+      ]
+    }
+  ],
+  "gaussian_method_difference": {
+    "time": 0.8,
+    "source_instance": 1.0,
+    "source_variance": 1.0,
+    "target_variance": 4.0,
+    "original_flowedit_expectation_output": 1.4960745371631432,
+    "partial_inverse_output": 1.843908891458578,
+    "absolute_difference": 0.34783435429543474,
+    "exact_source_cycle": 0.0,
+    "FE_expectation_computed_by_high_accuracy_ODE": true
+  },
+  "ill_conditioned_gate": {
+    "source_map_gain": 0.0001,
+    "inverse_source_L": 10000.0,
+    "cycle": 0.0001,
+    "corrected_output": 0.9999,
+    "reference_target": 0.0,
+    "error": 0.9999,
+    "conditional_bound": 0.9999000000000001
+  },
+  "Heun_singularity": {
+    "step": 0.1,
+    "heun_step_matrix_norm": 2.220446049250313e-16,
+    "different_inputs_output_distance": 1.2412670766236366e-16,
+    "exact_ODE_step_determinant": 0.1353352832366127,
+    "L1_source_cycle_rms": 2.1942709178604383e-17,
+    "candidate_status": "candidate_requires_task_evaluation",
+    "error_to_exact_inverse_target": 0.04695406709104457,
+    "quadrature_error_estimate": 8.512292695922314e-15,
+    "role": "analytic counterexample, not a measured FLUX failure"
+  },
+  "residual_correction_counterexample": {
+    "source_cycle_rms": 0.007071067811865474,
+    "raw_target": [
+      1.0,
+      0.0
+    ],
+    "corrected_target": [
+      1.0,
+      -0.009999999999999998
+    ],
+    "protected_coordinate": 1,
+    "raw_protected_change": 0.0,
+    "corrected_protected_change": 0.009999999999999998,
+    "role": "analytic task with protected second coordinate, not a measured image result"
+  },
+  "script_sha256": "694c78666fe81b7fae5677519bc8d1b91779c75618edd97d6867f32bfb4e1ce4",
+  "original_plan_sha256": "0f6f6ec246cb2e7ecd3e617e8bc5e90f4bfc69ed3622b48a00446357a607cbca",
+  "original_protocol_sha256": "1840b525f5e405a89977240113366a655fefd0c8b5022525479aadeba252c7c5",
+  "original_reference_sha256": "f4c412b0f1e090057ace6f9641bcebe761a85512865b3363dcec0e7e12f1bd64"
+}

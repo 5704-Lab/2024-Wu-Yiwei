@@ -1,0 +1,272 @@
+{
+  "scope": "finite-dimensional algebra and synthetic signals; no pretrained model or image quality validation",
+  "seed": 20261023,
+  "python": "3.12.2",
+  "numpy": "2.4.3",
+  "script_sha256": "3c3ef961268ef1088687234fba6b1bff98b91c75fb151b0d7b666c88cebc60d6",
+  "passed": 36,
+  "total": 36,
+  "checks": [
+    {
+      "name": "phase_appearance_derivative",
+      "passed": true,
+      "metrics": {
+        "error": 1.965119725019279e-11,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "appearance_without_displacement_changes_phase",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "positive_ray_rejects_phase_pi",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "principal_angle_information",
+      "passed": true,
+      "metrics": {
+        "error": 0.0,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "exact_nonidentifiability",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "richer_appearance_reduces_geometric_information",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "nuisance_reparameterization_invariance",
+      "passed": true,
+      "metrics": {
+        "error": 1.104226167233162e-15,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "joint_geometry_recovery",
+      "passed": true,
+      "metrics": {
+        "error": 5.551115123125783e-17,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "joint_model_unexplained_residual",
+      "passed": true,
+      "metrics": {
+        "error": 9.687650189286873e-16,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "geometry_error_bound",
+      "passed": true,
+      "metrics": {
+        "error": 0.0035650040880629064,
+        "bound": 0.007234101895059839
+      }
+    },
+    {
+      "name": "ridge_profile_cost",
+      "passed": true,
+      "metrics": {
+        "error": 1.7763568394002505e-15,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "ridge_profile_not_residual_squared",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "ridge_profile_psd_contraction",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "bounded_nuisance_not_unbounded_projection",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "state_update_profile_vs_joint_block",
+      "passed": true,
+      "metrics": {
+        "error": 5.4672143489065705e-16,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "active_task_constraint_kkt",
+      "passed": true,
+      "metrics": {
+        "error": 3.554447978966673e-16,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "task_constraint_satisfied",
+      "passed": true,
+      "metrics": {
+        "error": 2.220446049250313e-16,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "inactive_task_constraint",
+      "passed": true,
+      "metrics": {
+        "error": 0.0,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "dual_multiplier_tradeoff_derivative",
+      "passed": true,
+      "metrics": {
+        "error": 4.055122904134123e-11,
+        "tolerance": 1e-08
+      }
+    },
+    {
+      "name": "source_residual_requires_restoration",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "robust_operator_bound_attained",
+      "passed": true,
+      "metrics": {
+        "error": 8.881784197001252e-16,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "robust_perturbation_admissible",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "robust_task_gradient_bound",
+      "passed": true,
+      "metrics": {
+        "error": 2.220446049250313e-16,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "nonintegrable_allowed_velocities_drift",
+      "passed": true,
+      "metrics": {
+        "error": 0.0,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "explicit_source_family_closed_loop",
+      "passed": true,
+      "metrics": {
+        "error": 0.0,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "finite_nonlinear_recheck_required",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "circular_residual_handles_wrap",
+      "passed": true,
+      "metrics": {
+        "error": 6.245004513516506e-17,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "single_frequency_displacement_alias",
+      "passed": true,
+      "metrics": {
+        "error": 2.4492935982947064e-16,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "conditional_susceptibility_integral",
+      "passed": true,
+      "metrics": {
+        "error": 1.025079205553247e-15,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "trajectory_response_includes_state_feedback",
+      "passed": true,
+      "metrics": {
+        "error": 1.8844925619987407e-11,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "frozen_state_response_is_not_full_trajectory",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "necessary_phase_preserved_in_synthetic_model",
+      "passed": true,
+      "metrics": {
+        "error": 1.2101430968414206e-14,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "unnecessary_motion_suppressed_in_synthetic_model",
+      "passed": true,
+      "metrics": {
+        "raw_displacement": 0.7,
+        "corrected_displacement": 0.022580645161290148,
+        "retained_appearance": 0.9999999999999879
+      }
+    },
+    {
+      "name": "hard_phase_lock_blocks_synthetic_task",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "matrix_free_hessian_product",
+      "passed": true,
+      "metrics": {
+        "error": 6.764165321960921e-15,
+        "tolerance": 1e-09
+      }
+    },
+    {
+      "name": "scaled_penalty_continuous_limit",
+      "passed": true,
+      "metrics": {
+        "step_widths": [
+          0.001,
+          0.0005,
+          0.00025
+        ],
+        "velocity_errors": [
+          0.14429095690314098,
+          0.07271740601602482,
+          0.03650342469265629
+        ]
+      }
+    }
+  ]
+}

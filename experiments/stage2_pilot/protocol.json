@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-06",
+  "scope": "Stage 2 mechanism feasibility pilot, not full gate, no general success-rate claim",
+  "pairs": [
+    {
+      "pair_id": "bear_grass__00",
+      "upstream_entry": 1,
+      "source_image": "data/flowedit/Images/bear_grass.png",
+      "source_sha256": "6e612ed0c2b96b25f34bcdcc034c282be241a65582701478f9e4dc3375d0fe9e",
+      "source_prompt": "A large brown bear walking through a grassy field.",
+      "target_prompt": "A large black bear walking through a grassy field.",
+      "target_code": "1_black_bear",
+      "split": "mechanism"
+    },
+    {
+      "pair_id": "boat_silhouette__00",
+      "upstream_entry": 4,
+      "source_image": "data/flowedit/Images/boat_silhouette.png",
+      "source_sha256": "eb43f5aa48752a4fa811a051a3226dc6b386218988b49ad87b3ba265e1575ed6",
+      "source_prompt": "A serene scene of a lake with a silhouette of a sailboat floating on the water. The silhouette of the boat is positioned in the middle of the lake, slightly to the left. The sun is setting in the background, casting a warm glow over the scene.",
+      "target_prompt": "A serene scene of a lake with a sailboat floating on the water. The sailboat has white sails and red hull. The boat is positioned in the middle of the lake, slightly to the left. The sun is setting in the background, casting a warm glow over the scene.",
+      "target_code": "1_sailboat_white_sails_red_hull",
+      "split": "mechanism"
+    },
+    {
+      "pair_id": "cat__00",
+      "upstream_entry": 15,
+      "source_image": "data/flowedit/Images/cat.png",
+      "source_sha256": "b47c5a05e46848a1dffb6cfad7680e1305522da8489219be22e5a81c076d3b2e",
+      "source_prompt": "A small, fluffy kitten sitting in a grassy field. The kitten is positioned in the center of the scene, surrounded by a field. The kitten appears to be looking at something in the field.",
+      "target_prompt": "A small puppy sitting in a grassy field. The puppy is positioned in the center of the scene, surrounded by a field. The puppy appears to be looking at something in the field.",
+      "target_code": "1_puppy",
+      "split": "mechanism"
+    },
+    {
+      "pair_id": "cat_ginger__00",
+      "upstream_entry": 17,
+      "source_image": "data/flowedit/Images/cat_ginger.png",
+      "source_sha256": "e3e50a12c3fb824468d328caf39e62a6af3ee34af2f1f78ac1d8b81925908bc0",
+      "source_prompt": "An orange and white cat sitting.",
+      "target_prompt": "A silver cat sculpture.",
+      "target_code": "1_silver",
+      "split": "mechanism"
+    }
+  ],
+  "seeds": [
+    0
+  ],
+  "selected_step": 33,
+  "directions": [
+    "anchor",
+    "target_response",
+    "source_response",
+    "isotropic_qp",
+    "random_rank1"
+  ],
+  "signed_perturbation_factor": 0.1,
+  "continue_with": "unified single-sample Math SDPA baseline, source velocity shared exactly between arms",
+  "baselines": [
+    "unified_interface",
+    "official_batch4"
+  ],
+  "evaluator": "google/siglip2-base-patch16-256, frozen, image-text cosine",
+  "endpoint_abstain_abs_delta": 1e-05,
+  "prediction_abstain_abs_cosine": 1e-05,
+  "secondary_encoder": "not used in feasibility pilot; required for subsequent confirmation",
+  "finite_work_quadrature": 2,
+  "condition": "run only if R2 adaptive numerical gate passes; R1 remains failed",
+  "no_parameter_quality_tuning": true,
+  "heldout_used": false,
+  "checkpoint_precision": "FP64 entire local checkpoint including baseline candidate, all local predictions and probes; submitted latent FP32",
+  "continuation_precision": "FP32 common single-sample math SDPA"
+}

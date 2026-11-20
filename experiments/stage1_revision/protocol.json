@@ -1,0 +1,209 @@
+{
+  "version": "stage1-R1",
+  "date": "2026-10-06",
+  "previous_report_remains_failed": true,
+  "interface": "single sample Math SDPA FP32",
+  "scope": "All 13 old failing states plus 13 deterministic numerical pass controls; diagnostic selection, not independent full-set certification",
+  "states": [
+    {
+      "pair_id": "kid_running__00",
+      "seed": 1,
+      "step": 33,
+      "previous_failure": true,
+      "fp64_reference": true
+    },
+    {
+      "pair_id": "rocks__00",
+      "seed": 0,
+      "step": 33,
+      "previous_failure": true,
+      "fp64_reference": true
+    },
+    {
+      "pair_id": "kid_running__00",
+      "seed": 1,
+      "step": 23,
+      "previous_failure": true,
+      "fp64_reference": true
+    },
+    {
+      "pair_id": "beer_glass__00",
+      "seed": 1,
+      "step": 43,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "castle__00",
+      "seed": 1,
+      "step": 23,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "corgi__00",
+      "seed": 0,
+      "step": 33,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "corgi__00",
+      "seed": 1,
+      "step": 33,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "dog__00",
+      "seed": 0,
+      "step": 23,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "dogs2__00",
+      "seed": 1,
+      "step": 33,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "flowers_draw__00",
+      "seed": 1,
+      "step": 43,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "japanese_castle__00",
+      "seed": 0,
+      "step": 43,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "penguins__00",
+      "seed": 1,
+      "step": 33,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "rocks__00",
+      "seed": 1,
+      "step": 43,
+      "previous_failure": true,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "bear__00",
+      "seed": 0,
+      "step": 23,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "bear__00",
+      "seed": 0,
+      "step": 33,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "bear__00",
+      "seed": 0,
+      "step": 43,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "bear__00",
+      "seed": 1,
+      "step": 23,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "bear__00",
+      "seed": 1,
+      "step": 33,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "bear__00",
+      "seed": 1,
+      "step": 43,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "beer_glass__00",
+      "seed": 0,
+      "step": 23,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "beer_glass__00",
+      "seed": 0,
+      "step": 33,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "beer_glass__00",
+      "seed": 0,
+      "step": 43,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "beer_glass__00",
+      "seed": 1,
+      "step": 23,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "beer_glass__00",
+      "seed": 1,
+      "step": 33,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "brown_owl__00",
+      "seed": 0,
+      "step": 23,
+      "previous_failure": false,
+      "fp64_reference": false
+    },
+    {
+      "pair_id": "brown_owl__00",
+      "seed": 0,
+      "step": 33,
+      "previous_failure": false,
+      "fp64_reference": false
+    }
+  ],
+  "branches": 52,
+  "thresholds": {
+    "normwise_duality": 1e-06,
+    "energy_identity_normwise": 1e-06,
+    "matched_interface_primal": 1e-07,
+    "response_fp32_fp64_cosine": 0.999,
+    "same_anchor_qp_relative_to_radius": 0.05,
+    "qp_kkt_and_rounding": 1e-07,
+    "total_qp_relative_to_radius": 0.05
+  },
+  "scale": "u_norm and g_norm separated; both scalars stopped; response projectors unchanged in exact arithmetic",
+  "reference_scope": "both branches at the three previously selected outlier states; same FP32 probe in FP64",
+  "alpha": 0.3,
+  "rho": 1.0,
+  "lambda_s": 1.0,
+  "lambda_u": 1.0,
+  "radius_factor": 0.1,
+  "quality_claim": false
+}

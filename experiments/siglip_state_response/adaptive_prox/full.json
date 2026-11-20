@@ -1,0 +1,177 @@
+{
+  "protocol": {
+    "config": {
+      "omega_min": 0.25,
+      "omega_max": 4.0,
+      "power": 2.0,
+      "gradient_rms_floor": 1e-08,
+      "gradient_norm_floor": 1e-08,
+      "gamma_ratio": 0.1,
+      "V_floor": 0.0,
+      "V_cap": 10000.0,
+      "local_lambdas": [
+        0.25,
+        1.0,
+        4.0
+      ],
+      "full_lambda": 1.0,
+      "seed": 0,
+      "shuffle_seed": 123,
+      "basis": "fixed latent coordinate",
+      "precision": "float32",
+      "full_methods": [
+        "G",
+        "ISO",
+        "ADAPT"
+      ],
+      "scope": "development mechanism diagnostic, not independent task quality or speed validation"
+    },
+    "code_sha256": "7b9dea816256dce06c5b3943a963361566a1a74f9088c8cd755854acfb182cad",
+    "stage": "full"
+  },
+  "results": [
+    {
+      "pair": "bear__00",
+      "method": "BASE",
+      "target_logit": 3.6071395874023438,
+      "source_logit": 0.1645641326904297,
+      "seconds": 24.086388011462986,
+      "steps": 33,
+      "optimization_calls": 0,
+      "nonzero_corrections": 0,
+      "relative_to_baseline": 0.0
+    },
+    {
+      "pair": "bear__00",
+      "method": "G",
+      "target_logit": 9.002687454223633,
+      "source_logit": 5.050029754638672,
+      "seconds": 36.219814277254045,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.022650981236797787
+    },
+    {
+      "pair": "bear__00",
+      "method": "ISO",
+      "target_logit": 7.75678825378418,
+      "source_logit": 6.441013336181641,
+      "seconds": 36.15443455707282,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.34218850205330936
+    },
+    {
+      "pair": "bear__00",
+      "method": "ADAPT",
+      "target_logit": 9.09122085571289,
+      "source_logit": 7.267377853393555,
+      "seconds": 36.156873596832156,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.34180168794150945
+    },
+    {
+      "pair": "brown_owl__00",
+      "method": "G",
+      "target_logit": 8.455009460449219,
+      "source_logit": 5.128801345825195,
+      "seconds": 35.98672492802143,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.03347235305977302
+    },
+    {
+      "pair": "brown_owl__00",
+      "method": "ISO",
+      "target_logit": 4.136728286743164,
+      "source_logit": 4.932024002075195,
+      "seconds": 36.17572886869311,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.2879706906011563
+    },
+    {
+      "pair": "brown_owl__00",
+      "method": "ADAPT",
+      "target_logit": 6.85443115234375,
+      "source_logit": 5.725028991699219,
+      "seconds": 36.129535891115665,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.27616770920903133
+    },
+    {
+      "pair": "bus__00",
+      "method": "G",
+      "target_logit": 2.8009281158447266,
+      "source_logit": 1.1226177215576172,
+      "seconds": 36.024218859151006,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.05060750953045976
+    },
+    {
+      "pair": "bus__00",
+      "method": "ISO",
+      "target_logit": 2.9115982055664062,
+      "source_logit": 8.679428100585938,
+      "seconds": 36.179503061808646,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.36627167074766853
+    },
+    {
+      "pair": "bus__00",
+      "method": "ADAPT",
+      "target_logit": 6.361005783081055,
+      "source_logit": 9.031982421875,
+      "seconds": 36.18878093268722,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.35892643626854315
+    },
+    {
+      "pair": "cat_crown__00",
+      "method": "G",
+      "target_logit": 9.761919021606445,
+      "source_logit": 1.9115467071533203,
+      "seconds": 36.13213889300823,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.03381965580566191
+    },
+    {
+      "pair": "cat_crown__00",
+      "method": "ISO",
+      "target_logit": 12.32596206665039,
+      "source_logit": 8.87680435180664,
+      "seconds": 36.208002272993326,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.3303985854331203
+    },
+    {
+      "pair": "cat_crown__00",
+      "method": "ADAPT",
+      "target_logit": 13.992620468139648,
+      "source_logit": 8.680303573608398,
+      "seconds": 36.125848644413054,
+      "steps": 33,
+      "optimization_calls": 33,
+      "nonzero_corrections": 33,
+      "relative_to_baseline": 0.32653424478093585
+    }
+  ]
+}

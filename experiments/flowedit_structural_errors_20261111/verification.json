@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-11",
+  "scope": "CPU analytic identities and counterexamples only",
+  "new_image_model_forwards": 0,
+  "checks": 18,
+  "passed": 18,
+  "results": [
+    {
+      "name": "S1_conditional_coupling_distance",
+      "passed": true,
+      "evidence": {
+        "w2_squared": 0.2928932188134525,
+        "conditional_noise_variance": 0.25
+      }
+    },
+    {
+      "name": "S2_ideal_affine_mean_bias",
+      "passed": true,
+      "evidence": {
+        "bias": -0.24852813742385704,
+        "curvature_bias": 0.0
+      }
+    },
+    {
+      "name": "S4_posterior_variance_residual",
+      "passed": true,
+      "evidence": {
+        "residual_mse": 2.0000000000000004,
+        "posterior_variance": 0.5,
+        "note": "perfect model velocity zero at t=.5; residual is not model error"
+      }
+    },
+    {
+      "name": "S3_gaussian_heat_identity",
+      "passed": true,
+      "evidence": {
+        "exact_smoothing": 0.09600000000000009,
+        "heat_integral": 0.09600000000000003
+      }
+    },
+    {
+      "name": "Q1_gaussian_query_translation",
+      "passed": true,
+      "evidence": {
+        "w2": 0.32000000000000006,
+        "kl": 0.32000000000000023
+      }
+    },
+    {
+      "name": "Q2_target_jacobian_integral",
+      "passed": true,
+      "evidence": {
+        "exact": -0.7933454132624398,
+        "integral": -0.7933454132624399
+      }
+    },
+    {
+      "name": "Q2_ideal_affine_query_bias",
+      "passed": true,
+      "evidence": {
+        "source_variance": 1.0,
+        "target_variance": 4.0,
+        "t": 0.5,
+        "d": 1.0,
+        "field_bias": 0.6
+      }
+    },
+    {
+      "name": "V2_posterior_jacobian_identity",
+      "passed": true,
+      "evidence": {
+        "target_velocity_jacobian": [
+          [
+            -1.1111111111111112,
+            -0.4444444444444444
+          ],
+          [
+            -0.4444444444444445,
+            0.22222222222222224
+          ]
+        ],
+        "posterior_covariance": [
+          [
+            0.7777777777777777,
+            0.11111111111111113
+          ],
+          [
+            0.11111111111111113,
+            0.44444444444444453
+          ]
+        ]
+      }
+    },
+    {
+      "name": "V1_V4_ideal_nonedit_cross_coupling",
+      "passed": true,
+      "evidence": {
+        "same_point_response": [
+          2.0,
+          0.0
+        ],
+        "full_mean": [
+          3.111111111111111,
+          0.4444444444444445
+        ],
+        "normal_noising_mean": [
+          2.5555555555555554,
+          0.22222222222222224
+        ],
+        "source": [
+          2,
+          4
+        ],
+        "current_state": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "name": "V5_target_is_preserving_feasible",
+      "passed": true,
+      "evidence": {
+        "target_covariance": [
+          [
+            4.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ],
+        "preserving_transport": [
+          [
+            1.7320508075688772,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "V3_ideal_covariance_difference_and_variance",
+      "passed": true,
+      "evidence": {
+        "exact_covariance": [
+          [
+            0.35802469135802484,
+            0.09876543209876548
+          ],
+          [
+            0.09876543209876548,
+            0.06172839506172842
+          ]
+        ],
+        "analytic_covariance": [
+          [
+            0.3580246913580247,
+            0.09876543209876545
+          ],
+          [
+            0.09876543209876545,
+            0.0617283950617284
+          ]
+        ]
+      }
+    },
+    {
+      "name": "V3_nonlinear_gaussian_variance_bounds",
+      "passed": true,
+      "evidence": {
+        "lower": 0.3136000000000001,
+        "variance": 0.36480000000000007,
+        "upper": 0.41600000000000004
+      }
+    },
+    {
+      "name": "V3_shared_noise_not_universally_better",
+      "passed": true,
+      "evidence": {
+        "shared_variance": 1.0,
+        "independent_variance": 0.5
+      }
+    },
+    {
+      "name": "J1_J2_target_path_and_conditioning_defect",
+      "passed": true,
+      "evidence": {
+        "source_residual_cross_source_query": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "target_defect_cross_target_query": [
+          [
+            0.1777777777777778,
+            0.1111111111111111
+          ],
+          [
+            0.11111111111111112,
+            -0.05555555555555556
+          ]
+        ],
+        "target_covariance_equation_defect": [
+          [
+            0.35555555555555585,
+            0.22222222222222227
+          ],
+          [
+            0.22222222222222227,
+            -0.11111111111111108
+          ]
+        ]
+      }
+    },
+    {
+      "name": "J4_mixed_interaction_and_bound",
+      "passed": true,
+      "evidence": {
+        "interaction": -0.011397752009096762,
+        "analytic": -0.01139775200909685,
+        "bound": 0.11199999999999999
+      }
+    },
+    {
+      "name": "J3_telescoping_avoids_double_count",
+      "passed": true,
+      "evidence": {
+        "true_mean": -0.7060383254884199,
+        "telescoped": -0.7060383254884199,
+        "double_count_error": -0.011397752009096762
+      }
+    },
+    {
+      "name": "E1_E3_complete_trajectory_and_target_mismatch",
+      "passed": true,
+      "evidence": {
+        "endpoint_matrix": [
+          [
+            1.4949737275125574,
+            0.18493131053504866
+          ],
+          [
+            0.18493131053504863,
+            0.9401797959074114
+          ]
+        ],
+        "spectral_gains": [
+          0.8841871004235484,
+          1.5509664229964202
+        ],
+        "target_standard_deviations": [
+          0.8349996181244668,
+          2.074313293051943
+        ],
+        "integral_order_error": 1.1102230246251565e-15,
+        "independent_ode_error": 4.218847493575595e-15
+      }
+    },
+    {
+      "name": "zero_source_error_control",
+      "passed": true,
+      "evidence": {
+        "source_query_changed": true,
+        "mean_field_bias": 1.1102230246251565e-16
+      }
+    }
+  ]
+}

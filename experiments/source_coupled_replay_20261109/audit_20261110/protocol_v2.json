@@ -1,0 +1,152 @@
+{
+  "date": "2026-11-09",
+  "status": "design_complete_not_executed_on_image_models",
+  "model": "existing frozen FLUX.1-dev",
+  "primary_resolution": 512,
+  "primary_dtype": "float32",
+  "text_conditions": "complete CLIP/T5; audit lengths and cache identity before each stage",
+  "source_target_guidance": [
+    3.5,
+    3.5
+  ],
+  "tf32": false,
+  "source_features_injected": false,
+  "editing_mask": false,
+  "extra_trainable_models": false,
+  "radial_objective": false,
+  "conditioning_identity_includes_guidance": true,
+  "references": {
+    "manifest_sha256": "4552b044c9b41ed5badd509a1f30aceae1541127aed8ded9471a456604e002ea",
+    "reference_sha256": "f4c412b0f1e090057ace6f9641bcebe761a85512865b3363dcec0e7e12f1bd64"
+  },
+  "development_pair_ids": [
+    "bear__00",
+    "cat__00",
+    "corgi__00",
+    "bus__00"
+  ],
+  "confirmation_pair_ids": [
+    "bikes__00",
+    "butterfly__00",
+    "clown_fish__00",
+    "dog_snow__00",
+    "iguana__00",
+    "parrot__00",
+    "lighthouse__00",
+    "groceries__00",
+    "cake__00",
+    "jump_kick__00",
+    "cat_and_dog__00",
+    "milk__00"
+  ],
+  "exposure": "Existing benchmark with past project exposure; not claimed genuinely unseen data",
+  "source_disjoint_between_new_roles": true,
+  "times": {
+    "mechanism_horizons": [
+      0.15,
+      0.3,
+      0.9
+    ],
+    "confirmation_horizons": [
+      0.6,
+      0.9
+    ],
+    "primary_confirmation_horizon": 0.9,
+    "grid": "uniform within fixed horizon"
+  },
+  "cycle_rms_primary": 0.02,
+  "cycle_rms_secondary": [
+    0.01,
+    0.04
+  ],
+  "adaptive_source_lift": {
+    "trials": [
+      "L1",
+      "Heun1",
+      "Heun2",
+      "Heun4",
+      "Heun8",
+      "Heun16"
+    ],
+    "forward_calls": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "source_generation": "Heun24",
+    "maximum_source_calls": 351,
+    "maximum_target_calls": 48,
+    "maximum_total_calls": 399,
+    "selection": "first source-cycle pass at fixed horizon; no target score used",
+    "horizon_shrink_on_failure": false,
+    "unaccepted_output_is_not_a_success": true
+  },
+  "precision_gates": {
+    "native_adapter_relative_error_max": 1e-06,
+    "same_condition_clean_rms_max": 1e-07,
+    "pair_state_identity_rms_max": 1e-07,
+    "source_reference_levels": [
+      48,
+      96
+    ],
+    "reference_discrepancy_rms_max": 0.0005,
+    "maximum_reference_level": 192,
+    "reference_is_not_exact_ODE": true
+  },
+  "statistics": {
+    "unit": "source image; seeds/targets within a source are not independent units",
+    "baseline_seeds": [
+      20261109,
+      20261110,
+      20261111
+    ],
+    "paired_source_bootstrap_replicates": 10000,
+    "primary_metric": "joint full task completion and no major unrequested change/artifact",
+    "rejected_and_unassessable_cases": "count as non-success in primary coverage denominator",
+    "equal_completion_subset": "secondary only; report subset size and full-case outcomes",
+    "universal_semantic_guarantee_claim": false,
+    "zero_failures_12_sources_one_sided_95_failure_upper": 0.22092219194555585
+  },
+  "annotation": {
+    "before_generation": "freeze per-pair allowed/protected factors and task rubric",
+    "raters": 2,
+    "methods_blinded": true,
+    "adjudicate_disagreements": true,
+    "task_labels": [
+      "complete",
+      "partial",
+      "absent",
+      "unassessable"
+    ],
+    "protected_labels": [
+      "none",
+      "minor",
+      "major",
+      "unassessable"
+    ],
+    "category_morphology": "allow target-appropriate morphology; do not equate it with pose drift",
+    "scorer": "existing SigLIP2 offline; record absolute target/source logits separately",
+    "scorer_is_oracle": false,
+    "online_semantic_feedback": false
+  },
+  "stage_gates": {
+    "math": "all analytic checks pass",
+    "smoke": "identity/pair accounting pass; retain rejected high-horizon candidates as failures",
+    "mechanism": "reference numerically stable or mark reference_unresolved",
+    "confirmation": "Consume the four explicit development_main jobs at T=.9; require >=2/4 full target completions, >=3/4 source gate coverage, completed map-stability audit for every accepted development case, and code/config/annotations locked. Otherwise stop before confirmation.",
+    "quality_claim": "joint success and protected-factor outcomes at comparable full completion; source PSNR alone is insufficient",
+    "main_map_stability": "Compare fixed-qT source and target maps at 24/48/96 steps; require each successive difference <=5e-4 RMS or mark solver_consistency_failed. Do not silently change the main solver."
+  },
+  "costs": "Transformer calls below exclude text/VAE and any offline derivative probes; report all actual calls/time",
+  "optional_extension": "1024 resolution and genuinely new independent sources only after primary gates pass",
+  "revision": "v2_audit_draft",
+  "revision_date": "2026-11-10",
+  "parent_protocol_sha256": "1840b525f5e405a89977240113366a655fefd0c8b5022525479aadeba252c7c5",
+  "reviewed_method_role": "approximate partial-inversion diagnostic; no proven inversion-free preservation gain",
+  "machine_source_cycle_guarantee": "correction amplitude only; edit reference error additionally requires conditioning",
+  "Heun_inverse_bound_certified_for_FLUX": false,
+  "solver_audit": "On accepted development lifts, compare source and target Heun24/48/96 maps; numerical grid stability is not a rigorous error certificate"
+}

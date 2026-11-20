@@ -1,0 +1,100 @@
+{
+  "version": "20261104_v1",
+  "status": "research_design_only",
+  "new_image_model_queries_executed": 0,
+  "objective": "Identify source-conditioned semantic responses and unnecessary pose/position violation growth at the actual current clean FlowEdit state, before attempting feedback correction.",
+  "fixed_runtime_inputs": ["source image and x0", "source and target text", "actual current clean y", "actual nominal signed step d0", "locked probe bank"],
+  "runtime_restrictions": {
+    "models": ["original frozen SD3 Medium", "original frozen VAE", "existing frozen SigLIP2"],
+    "training": false,
+    "inversion": false,
+    "new_llm_or_vqa": false,
+    "external_correct_target": false,
+    "spatial_velocity_or_update_mask": false,
+    "offline_factor_truth": "evaluation and calibration only; never passed to deployed feedback",
+    "permission": "fixed by source and intended task; never enlarged by current mistakes",
+    "prompt_semantics": "restricted declared factors; no claim of general free-text permission parsing"
+  },
+  "coordinates": {
+    "current_state": "actual scaled clean y, not noisy query or denoised endpoint prediction",
+    "signed_step": "d0 = -h * nominal_velocity_difference; h > 0",
+    "flowedit_source_query": "qs = (1-t)*x0 + t*epsilon_FE",
+    "flowedit_target_query": "qt = y + qs - x0; D_y qt = I",
+    "semantic_probe": "z_tau(y) = (1-tau)*y + tau*epsilon_p; D_y z = (1-tau) I",
+    "time_requirement": "probe tau is separate from the editing integrator t; use actual scheduler network-time conversion"
+  },
+  "readers_to_compare": [
+    "existing SigLIP matched semantic contrasts, subject to previous morphology failure",
+    "native same-query conditional velocity response, not automatically a scalar-loss gradient",
+    "native velocity-denoising MSE evidence with full y derivative including the supervision-target +I term"
+  ],
+  "factor_rows": ["complete target category", "color", "morphology", "head relative to body", "body orientation", "object relative scene position", "background", "instance-role binding"],
+  "reader_matrix_C": "normalized finite reader responses to independently known single-factor changes; missing truth stays missing",
+  "action_matrix_H": "H[a,b] = J_a(y) B_b; verify against finite s_a(y+B_b)-s_a(y)",
+  "normalization": "independent finite meaningful factor-change scale delta_a; never gradient norm as a semantic unit",
+  "leak_metric": {
+    "source_violation": "v_j(y) = positive_part(norm(k_j(y)-k_j(x0))-beta_j)",
+    "new_violation": "positive_part(v_j(y+d)-v_j(y))",
+    "also_report": ["absolute source error", "violation reduction", "signed within-tolerance motion", "cumulative drift"],
+    "ratio": "only with validated complete-task progress and positive meaningful denominator; otherwise undefined",
+    "interpretation": "calibrated response ratio, never intrinsic semantic energy percentage"
+  },
+  "phase_A": {
+    "purpose": "reader validity before control",
+    "required_cases": ["legal full morphology with preserved pose", "color-only hard negative", "correct target with both signs of wrong head pose", "body/camera confounds", "relative position vs global translation", "wrong-instance edit", "explicit pose/position request positive", "area/brightness/texture controls"],
+    "old_toy_and_natural_data": "exploratory reuse only",
+    "fresh_confirmation": "new source identities and new locked seeds; no numerical cutoff retuning after seeing them",
+    "proposed_screening_goals_not_guarantees": {"factor_ranking_accuracy": 0.8, "legal_false_rejection_max": 0.1},
+    "go_no_go": "every required factor and both turn signs must work; averaged color gains cannot compensate failed morphology or missing head-turn detection"
+  },
+  "phase_B": {
+    "purpose": "frozen-y text factorial and inherited nominal-step audit",
+    "pilot_sources": ["bear__00", "brown_owl__00", "cat_crown__00", "corgi__00"],
+    "current_states": ["flow_step23", "flow_step43"],
+    "source_state_also_probed": true,
+    "split": "all exploratory reuse, irrespective of old split names",
+    "factorial": "2^3 full conditions: edit x explicit head orientation x explicit location, plus empty text",
+    "zero_factor_meaning": "description omitted, not observed factor equal to zero",
+    "probe_tau": [0.2, 0.35],
+    "paired_noise_seeds": [20261104, 20261105],
+    "basic_branch_forwards_planned": 432,
+    "basic_count": "4 sources * (1 source state + 2 current states) * 4 probes * 9 conditions",
+    "additional_controls_excluded_from_432": ["same-text no-op", "explicit source pose/location preservation", "reverse pose and reverse position", "paraphrase and unrelated/scrambled text", "category vs color disambiguation", "object selection wording vs movement instruction"],
+    "condition_encoding": "fully re-encode both CLIP encoders, T5 sequence and pooled projections; hash all outputs and truncation",
+    "source_current_pair": "same complete prompt, same noise, same probe time for each source-current comparison",
+    "nominal_audit": "five actual-query branches for exact symmetric text + CFG asymmetry + source-state identity",
+    "replay_requirement": "if actual nominal step/noise unavailable, replay original RNG and verify saved y before attribution; sparse snapshot differences are not per-step velocities",
+    "scale_up_20_sources": "2160 current + 720 source = 2880 basic branch forwards for 3 current states, excluding controls and gradients"
+  },
+  "phase_C": {
+    "purpose": "finite response validity and selective action feasibility",
+    "step_multipliers": [0, 0.25, 0.5, 1],
+    "candidate_actions": ["nominal FlowEdit", "simple step shrink", "validated discriminative semantic gradient", "same-query text velocity contrast", "explicit pose contrast", "explicit location contrast", "text interaction", "actual CFG asymmetry component", "actual source-state component", "norm-matched random direction", "source-revert direction"],
+    "matched_comparisons": ["equal latent norm", "equal independent complete-task attainment"],
+    "attribution_checks": ["directional Jd vs endpoint difference", "whole-step integrated directional gradient vs endpoint difference", "joint interactions and norm cross terms"],
+    "proposed_numerical_screening_goals_not_guarantees": {"nonzero_response_sign_accuracy": 0.8, "median_relative_finite_response_error_max": 0.2},
+    "weak_responses": "report separately; never discard to inflate agreement",
+    "local_feasibility": "test whether target row has progress in validated keep-Jacobian nullspace; distinguish full latent feasibility from restricted B action feasibility",
+    "coefficient_metric": "use B^T M B for latent action norm; coefficient Euclidean norm is insufficient"
+  },
+  "phase_D": {
+    "status": "conditional future stage; not authorized by proxy improvement alone",
+    "prerequisites": ["reader C passes", "finite H validated", "equal-task-completion selective candidate exists"],
+    "first_test": "repair actual wrong-pose y while preserving all already achieved task factors",
+    "optimization": "minimum deviation from d0 under fixed-source absolute keep constraints and per-factor task-deficit conditions",
+    "zero_feedback": "accept unchanged nominal candidate when all actual finite checks hold",
+    "finite_acceptance": "recompute on actual stored-precision y+d; do not rely only on linearized predictions",
+    "infeasibility": "log explicitly, distinguish measurement failure, action limitation and true local conflict",
+    "full_trajectory_gate": "only after short-step restoration succeeds with independent factor evaluation",
+    "claim_limit": "empirical finite acceptance, not strict robust semantic guarantee"
+  },
+  "statistics": {
+    "unit": "source identity",
+    "repeated_measures": ["states", "probe times", "noise seeds", "prompt paraphrases"],
+    "confidence": "source-clustered paired intervals; report task/factor-specific failures",
+    "small_pilot": "descriptive only, not proof of generalization",
+    "selection": "lock prompts/readers/scales/thresholds before fresh source confirmation",
+    "independent_validation": "offline blinded annotation or known physical factor truth; same SD3 evidence cannot self-certify actual success"
+  },
+  "required_outputs": ["input and condition hashes", "C and H plus finite responses", "per-source factor errors and support flags", "actual decoded candidates", "equal-completion preservation curves", "query/gradient counts, time and peak memory", "all rejected and under-edited cases", "no model-effectiveness claim from constructed math checks"]
+}

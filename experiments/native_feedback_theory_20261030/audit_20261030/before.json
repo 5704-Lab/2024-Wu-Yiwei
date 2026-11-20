@@ -1,0 +1,67 @@
+{
+  "source_sha256_before": "d304334d5250934ccb4b539ba924536ba56acfd71d71872376cf2aaa2337df5b",
+  "scope": "constructed audit counterexamples; no model or image experiments",
+  "issues": {
+    "feasible_ill_conditioned_equality": {
+      "exception": "Inconsistent recovery equations",
+      "exact_feasible_solution": [
+        0.0,
+        1.0
+      ]
+    },
+    "orphan_task_floor": {
+      "status": "optimal",
+      "increment": [
+        0.0
+      ],
+      "diagnostics": {
+        "solver": "analytic_nominal_feasibility",
+        "status": "optimal",
+        "nominal_feasible": true,
+        "step_width": 0.1,
+        "residual_caps": [
+          1.0
+        ],
+        "finite_nonlinear_acceptance_performed": false,
+        "semantic_validity_certified": false,
+        "objective": 0.0,
+        "maximum_relation_constraint_violation": -1.0,
+        "correction_metric_norm": 0.0,
+        "total_metric_norm": 0.0
+      }
+    },
+    "coordinate_box": {
+      "residual": [
+        -0.011228922063957758,
+        0.14943813247359922
+      ],
+      "rotated_residual": [
+        -0.1136087637767754,
+        0.09772866990309585
+      ],
+      "beta": 0.12,
+      "passes_original": false,
+      "passes_rotated": true
+    },
+    "bounded_J_is_insufficient": [
+      {
+        "h": 0.1,
+        "J": 0.2,
+        "residual": -0.99,
+        "increment": 0.4710547807220001
+      },
+      {
+        "h": 0.01,
+        "J": 0.02,
+        "residual": -0.9999,
+        "increment": 0.4974585617103432
+      },
+      {
+        "h": 0.001,
+        "J": 0.002,
+        "residual": -0.999999,
+        "increment": 0.4997495835624209
+      }
+    ]
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "date": "2026-11-06",
+  "scope": "Analytic models and seeded synthetic arrays only; no FLUX/SD3 inference",
+  "seed": 20261106,
+  "passed": 20,
+  "total": 20,
+  "checks": [
+    {
+      "name": "exact_score_velocity_identity",
+      "passed": true,
+      "error": 3.1031676915590914e-16
+    },
+    {
+      "name": "chord_residual_is_posterior_reconstruction_residual",
+      "passed": true,
+      "identity_error": 2.220446049250313e-16,
+      "residual_norm": 2.297149430255558
+    },
+    {
+      "name": "perfect_velocity_still_has_nonzero_chord_residual",
+      "passed": true,
+      "conditional_expected_squared_residual": 3.7913767822420494
+    },
+    {
+      "name": "posterior_mean_inverse_is_not_ode_inverse",
+      "passed": true,
+      "x": 2.0,
+      "time": 0.5,
+      "posterior_consistent_q": 2.0,
+      "posterior_prediction": 2.0,
+      "actual_ode_return": 2.82842712474619
+    },
+    {
+      "name": "true_ode_inverse_need_not_have_zero_denoiser_residual",
+      "passed": true,
+      "true_inverse_q": 1.4142135623730951,
+      "posterior_prediction": 1.4142135623730951,
+      "actual_ode_return": 2.0
+    },
+    {
+      "name": "same_marginals_do_not_imply_same_sample_coupling",
+      "passed": true,
+      "theoretical_variance": 0.5,
+      "empirical_variance_errors": [
+        0.0005500963563263017,
+        0.0007602028161136087
+      ],
+      "paired_query_mse": 0.2939502096448294
+    },
+    {
+      "name": "clean_endpoint_condition_difference_degenerates",
+      "passed": true,
+      "velocity_difference_norm": 0.0
+    },
+    {
+      "name": "normalized_small_noise_signal_survives",
+      "passed": true,
+      "raw_signal_norm": 0.00010165978300910562,
+      "normalized_limit_error": 1.7603072055779557e-08
+    },
+    {
+      "name": "deterministic_first_order_lift_has_second_order_local_error",
+      "passed": true,
+      "t_values": [
+        0.02,
+        0.01
+      ],
+      "errors": [
+        0.0004081207748551918,
+        0.00010100752461617013
+      ],
+      "error_ratio": 4.040498729238796
+    },
+    {
+      "name": "second_order_lift_expansion",
+      "passed": true,
+      "errors": [
+        8.12077485523588e-06,
+        1.0075246161811435e-06
+      ]
+    },
+    {
+      "name": "equal_displacement_vs_shared_noising",
+      "passed": true,
+      "error": 8.326672684688674e-17,
+      "query_difference_norm": 0.21499999999999994
+    },
+    {
+      "name": "replacing_only_source_velocity_breaks_no_edit_identity",
+      "passed": true,
+      "original_norm": 0.0,
+      "naive_norm": 2.297149430255558
+    },
+    {
+      "name": "time_dependent_query_scaling_requires_chain_rule",
+      "passed": true,
+      "chain_rule_error": 1.1102230246251565e-16,
+      "naive_derivative_error": 0.1334166406412633
+    },
+    {
+      "name": "adaptive_noise_changes_measure",
+      "passed": true,
+      "original_mean": 0.0,
+      "selected_mean": 1.0,
+      "selected_variance": 0.5,
+      "kl": 0.5965735902799727
+    },
+    {
+      "name": "correlated_noise_changes_adaptive_dynamics",
+      "passed": true,
+      "independent_mean_field_prediction": 0.0,
+      "measured_bias": 0.0794448160046835,
+      "exact_bias": 0.08000000000000002
+    },
+    {
+      "name": "conditional_prior_changes_nuisance_even_with_equal_nuisance_marginals",
+      "passed": true,
+      "task_direction": 1.96078431372549,
+      "nuisance_direction": -1.372549019607843
+    },
+    {
+      "name": "clean_state_likelihood_ratio_gradient",
+      "passed": true,
+      "finite_difference_error": 2.0219348622584714e-12
+    },
+    {
+      "name": "exact_cycle_and_marginals_do_not_identify_preserved_content",
+      "passed": true,
+      "cycle_error": 5.551115123125783e-17,
+      "nuisance_change": -2.8
+    },
+    {
+      "name": "velocity_orthogonality_is_not_feature_preservation",
+      "passed": true,
+      "orthogonality": 0.0,
+      "feature_change": 1.0
+    },
+    {
+      "name": "finite_step_requires_actual_feature_check",
+      "passed": true,
+      "finite_step_feature_error": 0.040000000000000036
+    }
+  ]
+}

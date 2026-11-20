@@ -1,0 +1,133 @@
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1]
+r1=json.loads((ROOT/'experiments/stage1_revision/outputs/summary.json').read_text());r2=json.loads((ROOT/'experiments/stage1_adaptive/outputs/summary.json').read_text());s=json.loads((ROOT/'experiments/stage2_pilot/outputs/summary.json').read_text());a=json.loads((ROOT/'experiments/stage2_pilot/outputs/analysis.json').read_text())
+assert r1['complete'] and r2['complete'] and s['complete']
+text=r'''# 数值修订与四图机制先导：结果分析及方向调整
+
+日期：2026-10-06。配套：[理论讨论及完整数学推导](条件响应数值修订_尺度分离与校正稳定性_2026-10-06.md)、[单独实验设计](条件响应数值修订与机制先导实验设计_2026-10-06.md)。
+
+## 1. 结论与当前状态
+
+完成了新的数值诊断和四图机制先导，全程冻结模型，无训练、微调、反演或编辑掩码。旧 2026-10-05 完整审查仍未通过，R1 仍未通过；不追认旧失败。R2 精度退回在本轮诊断状态通过。
+
+**数值困境已有可执行处理，语义预测困境仍未解决。** 四源图的独立 SigLIP2 评价没有显示当前网络条件对比工作量能稳定预测终点变化。不能宣布编辑质量提高、非编辑内容得到准确保护或少步加速。
+
+## 2. 数值结果与理论解释
+
+R1 固定旧 13 个失败状态与 13 个通过状态作为数值控制，共 26 状态、52 FP32 分支。另在三个固定异常状态检查六个 FP64 分支。这是有目的的诊断抽样，不是独立泛化测试。
+
+'''
+text+=f'''- 范数对偶残差最大 {r1['metrics']['normwise_dual_residual']:.6g}，通过 1e-6 门槛。
+- 同一单样本数学 SDPA 接口的生成/求导前向值差为 {r1['metrics']['matched_interface_primal']:.6g}。该一致性是接口核对，不证明任务正确。
+- 正能量恒等式范数残差最大 {r1['metrics']['energy_identity_normwise']:.6g}；三个状态、四个分支未通过 1e-6，R1 保持未通过。
+- FP32/FP64 响应方向余弦最低 {r1['min_fp64_response_cosine']:.9f}。
+- 固定半空间的 QP 位移差最大为半径的 {r1['max_same_anchor_qp_relative']:.6g}；条件对比也换用 FP64 后最大为半径的 {r1['max_full_qp_relative']:.6g}。
+- R2 复用 23 个通过状态，三个失败状态的完整局部步骤重新用 FP64，包括速度、响应、条件对比与 QP。六个分支及提交 FP32 后的位移约束均通过。不能用这三个状态估计未来精度退回率。
+
+'''
+text+=r'''两个正标量归一化在精确算术下保持响应投影不变。FP32 实测归一化响应与旧响应的余弦最低 0.999999996；固定候选/半空间下，仅改变响应计算造成的 QP 位移差最高约为半径的 2.48e-7。它解决实现问题，不改变原方案的语义信息。
+
+理论上，固定候选、半空间与半径时，若源/目标响应角误差分别为 theta_s、theta_a，强凸 QP 满足
+
+$$
+\frac{\|w-w'\|}{R}
+\le\frac{\rho}{\alpha+\rho}
+\left(\lambda_s|\sin\theta_s|+\lambda_u|\sin\theta_a|\right).
+$$
+
+这个界不适用于半空间方向也变化的情况，故实验另外检查完整精度变化。三个配对参考的实际固定半空间 QP 差都低于响应投影扰动界；差中包含很小的 FP32 解存储舍入。
+
+一次参考任务并发读取尚未写完的检查点导致执行错误，完成标记和原子写入修复后重试补齐。错误、修复前源码、重试日志均保留；没有删除不利数值结果。
+
+## 3. 四图机制先导
+
+固定机制集最先出现的四个源图组及各自首目标：brown bear→black bear、帆船剪影→白帆红船体、猫→幼犬、姜猫→银色雕塑。种子 0，中噪声 step33，实际 t 约 0.594801。保留原 50 步日程、33 个配对编辑步、CFG 3.5/13.5、512 分辨率。
+
+每个检查点完整使用 FP64，然后将共同候选和正/负干预提交为 FP32。后续固定未来噪声，关闭新增校正，使用统一单样本数学 SDPA 的原 FlowEdit 数学更新式。源分支在各臂之间精确复用。
+
+五种方向为共同条件对比、目标响应、源响应、各向同性 QP 解方向、秩一随机方向。各方向按 0.1||Delta_0|| 做等幅正/负干预。**这些是方向探针，尤其负方向及重新归一化的 QP 解不等于执行原约束 QP 控制器。**
+
+总共 40 次干预、4 个共同无干预终点，另有 4 个官方 batch4 基线。四图全部完成，未来噪声哈希保持不变。模型与评价器参数均不更新。独立评价使用冻结 SigLIP2 的归一化图文余弦，文本最多 64 token；源与目标分数分开记录。
+
+## 4. 独立终点评价
+
+| 预测方式 | 目标绝对分数：符号命中/可判定 | 相对偏好：符号命中/可判定 |
+|---|---:|---:|
+'''
+for method,label in [('local','一阶工作量'),('finite','两个中点的有限工作量')]:
+ tr=s['results'][method+'_target'];pr=s['results'][method+'_preference'];text+=f"| {label} | {tr['sign_correct']}/{tr['eligible_pairs']} | {pr['sign_correct']}/{pr['eligible_pairs']} |\n"
+text+=r'''
+分母变化来自预设不可判定规则，全部原始记录保留。它们是对代理终点排序的描述性命中率，不是语义编辑成功率。
+
+在共同可判定样例上，一阶与有限工作量对目标绝对分数均为 **5/16**，对相对偏好均为 **6/15**；预测符号完全相同。有限工作量总命中数增加来自新增判定样例，没有证据显示它在相同样例上的符号预测更准确。额外局部查询没有展示预期的预测增益。
+
+### 4.1 一阶预测按方向分解
+
+| 干预方向 | 目标绝对分数 | 相对偏好 |
+|---|---:|---:|
+'''
+for name,label in [('anchor','条件对比'),('target_response','目标响应'),('source_response','源响应'),('isotropic_qp','各向同性 QP'),('random_rank1','随机方向')]:
+ tr=a['local_by_direction'][name]['target'];pr=a['local_by_direction'][name]['preference'];text+=f"| {label} | {tr['correct']}/{tr['valid']} | {pr['correct']}/{pr['valid']} |\n"
+text+=r'''
+各向同性 QP 的一阶投影接近半空间边界，均为不可判定。不能把它记成零成功率，更不能据此声称方向比其他方法差。其有限工作量与实际终点变化完整保留。
+
+条件对比方向的目标绝对分数只命中 1/4，相对偏好却命中 3/4。两例中相对偏好增加而目标绝对匹配下降，说明仅用相对偏好会掩盖源匹配下降造成的变化。
+
+### 4.2 源图分组与接口影响
+
+| 源图 | 一阶/目标组内 Spearman | 一阶/相对偏好组内 Spearman | 官方减统一基线的目标分数 |
+|---|---:|---:|---:|
+'''
+for c in s['cases']:
+ text+=f"| {c['record']['pair_id']} | {c['within_source_descriptive']['local_target']['spearman_descriptive']:.3f} | {c['within_source_descriptive']['local_preference']['spearman_descriptive']:.3f} | {c['official_minus_unified']['target']:.6g} |\n"
+text+=r'''
+方向相关性在不同源图间不一致，船与银猫的目标排序呈负相关。这里只描述结果，不从四个源图做确定的总体推断。二十条方向记录是组内重复，不能当成二十个独立样本。
+
+数值接口本身也造成可测量的分数差，不能声称统一接口与官方基线逐像素等价。所有正/负干预都相对同一个统一接口基线进行，因此内部配对比较仍然固定了接口；没有据此宣布质量超越官方 FlowEdit。
+
+## 5. 为什么提高精度仍不够
+
+### 5.1 径向探针遗漏变化
+
+当前梯度等价于速度能量的对应条件梯度。反例 v(e)=(cos e,sin e) 中，条件改变速度方向但保持模长，J^T(-hv)=0。原探针因此看不到这种变化；提高精度不能解决这个信息缺口。它是反例，不是已经确认的真实模型主要失败原因。
+
+### 5.2 当前时间代理不等于终点目标
+
+固定未来噪声，后续一步的状态 Jacobian 为 A_j=I-h_j D_q v_tar。终点独立目标的有效梯度是所有 A_j 的转置乘积作用于终点梯度。当前 a(q_E) 没有这些传播，也不是独立目标梯度。提高当前点密度对比工作量不蕴含终点图文分数提高。
+
+### 5.3 本步 QP 代数保证的边界
+
+源潜距离不增与代理投影非负可以同时成立，仍不能证明目标正确或非编辑区域一致。先导没有执行完整各向异性 QP 控制器，因此也不能把它解释成该控制器已被质量实验否定。它否定的是目前已有充分证据支持代理预测这一说法。
+
+## 6. 决策与方案调整
+
+1. **保留统一速度接口、尺度分离、实际提交约束检查与必要的 FP64 精度退回。** 它们处理了本轮可定位的数值问题，属于实现，不作为原创贡献。
+2. **停止把原始径向响应当成准确语义方向，把条件对比有限工作量当成终点接受证书。** 不扩大当前径向探针控制器的完整质量实验，不通过提高权重补救，不根据四图结果简单翻转向量。
+3. **后续先区分任务代理与传播两个因素。** 固定网络、未来噪声与同一幅值，比较原速度探针、当前任务对齐探针、短期续推后拉回的任务探针。当前任务探针只修复局部对齐，不能自动修复已经表现不稳定的密度对比代理。
+4. **任务代理需要独立交叉评价。** 若未来用某图文模型构造推理目标，就用另一个模型与人工盲审验证，不能用同一模型的优化分数自证语义正确。先在机制集尚未使用的源图组冻结新协议，不利用留出集调参。
+5. **减步暂不推进。** 后续 Jacobian 会放大局部误差，额外 VJP/JVP、FP64 和有限查询的成本已经明显；本轮没有公平总耗时优势证据。
+
+任务对齐的代数候选为 r_i^task=J_iJ_i^T a_task。它使 a_task^T r_i^task>=0，却只针对给定代理。可通过短期状态映射的转置 Jacobian 拉回代理梯度，具体公式和条件在理论文档 R12–R18。本轮没有运行这项新候选，不声称它优于径向探针或具有已验证原创性。
+
+## 7. 图像与证据
+
+已查看全部四图的 overview；正/负干预的可见差异总体较小，不能从缩略图量化质量增益。基线存在目标形态与背景变化，未用掩码或真实目标图给出准确非编辑区域指标。视觉查看不是盲审，也不是语义真值标签。
+
+- [棕熊→黑熊：全部候选](../experiments/stage2_pilot/outputs/bear_grass__00/overview.png)
+- [帆船：全部候选](../experiments/stage2_pilot/outputs/boat_silhouette__00/overview.png)
+- [猫→幼犬：全部候选](../experiments/stage2_pilot/outputs/cat__00/overview.png)
+- [银猫雕塑：全部候选](../experiments/stage2_pilot/outputs/cat_ginger__00/overview.png)
+- [R1 数值汇总](../experiments/stage1_revision/outputs/summary.json)
+- [R2 精度退回汇总](../experiments/stage1_adaptive/outputs/summary.json)
+- [四图全部终点评价](../experiments/stage2_pilot/outputs/summary.json)
+- [共同覆盖率比较与方向分解](../experiments/stage2_pilot/outputs/analysis.json)
+- [原始配对记录](../experiments/stage2_pilot/outputs/paired_results.jsonl)
+- [复现说明](../experiments/stage2_pilot/README.md)
+
+模型、编码、噪声、输入、协议和执行源码的哈希保留。没有第二评价器、正式分组复核、准确语义成功率或少步效率结论；这些是后续实验证据要求，不能用当前四图补齐。
+'''
+# Keep mathematical backslashes literal when generating Markdown.
+
+p=ROOT/'docs/数值修订与四图机制先导_结果分析及方向调整_2026-10-06.md';p.write_text(text)
+print(p)

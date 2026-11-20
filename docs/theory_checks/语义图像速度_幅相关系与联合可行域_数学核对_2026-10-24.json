@@ -1,0 +1,236 @@
+{
+  "passed": 42,
+  "total": 42,
+  "checks": [
+    {
+      "name": "flowedit_positive_progress_sign",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "latent_decoder_filter_phase_chain_rule",
+      "passed": true,
+      "metrics": {
+        "max_error": 2.73143063722614e-10
+      }
+    },
+    {
+      "name": "log_amplitude_chain_rule",
+      "passed": true,
+      "metrics": {
+        "max_error": 3.259565950486376e-10
+      }
+    },
+    {
+      "name": "joint_amplitude_phase_reconstructs_complex_velocity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "positive_global_gain_has_zero_phase_rate",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "positive_global_gain_changes_amplitude",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "fixed_source_complex_observation_jvp",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "epsilon_embedding_requires_radial_derivative",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "epsilon_embedding_is_not_gain_invariant",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "regularized_phase_rate_has_nonzero_closed_loop",
+      "passed": true,
+      "metrics": {
+        "integral": -0.21000000000000002
+      }
+    },
+    {
+      "name": "true_phase_change_on_same_loop_is_zero",
+      "passed": true,
+      "metrics": {
+        "integral": 2.220446049250313e-16
+      }
+    },
+    {
+      "name": "regularized_phase_one_form_is_not_closed",
+      "passed": true,
+      "metrics": {
+        "exterior_derivative_coefficient": 0.5
+      }
+    },
+    {
+      "name": "actual_smooth_observation_differential_closes",
+      "passed": true,
+      "metrics": {
+        "error": 2.7755575615628914e-17
+      }
+    },
+    {
+      "name": "spatial_appearance_has_nonzero_filter_commutator",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "spatial_appearance_can_change_phase",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "commutator_exactly_explains_spatial_phase",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "phase_only_mechanism_geometry_ambiguity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "shared_amplitude_phase_increases_conditional_information",
+      "passed": true,
+      "metrics": {
+        "conditional_information": 0.5000000000000001
+      }
+    },
+    {
+      "name": "independent_amplitude_phase_coefficients_erase_the_gain",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "joint_observation_does_not_guarantee_identification",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "phase_fit_can_hide_wrong_fact",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "three_shared_relations_select_colour_without_pose_or_background",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "removing_amplitude_relation_leaves_background_free",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "removing_phase_relation_leaves_pose_free",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "bispectral_phase_is_translation_invariant",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "absolute_anchor_detects_the_same_translation",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "bispectral_phase_is_positive_gain_invariant",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "biphase_detects_one_nontranslation_phase_edit",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "coupled_multi_factor_constraints",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "coupled_KKT_stationarity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "block_solution_agrees_with_independent_solver",
+      "passed": true,
+      "metrics": {
+        "error": 6.397344083151129e-17
+      }
+    },
+    {
+      "name": "profiled_block_Hessian_is_correct",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "unreachable_requested_fact_is_exposed",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "necessary_nonzero_phase_must_be_permitted",
+      "passed": true,
+      "metrics": {
+        "zero_phase_infeasibility": 0.14142135623730953
+      }
+    },
+    {
+      "name": "zero_raw_velocity_can_need_source_restoration",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "source_squared_gradient_barrier_can_be_blind",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "finite_residual_tube_detects_first_step",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "finite_step_Taylor_remainder_bound",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "reference_Jacobian_is_evaluated_at_reference",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "multiple_proxy_agreements_do_not_establish_binding",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "commuting_edit_can_still_move_an_unrequested_anchor",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "latent_reparameterization_requires_metric_transform",
+      "passed": true,
+      "metrics": {}
+    }
+  ],
+  "scope": "finite-dimensional identities, constructed signal controls and declared fact operators; no pretrained-image or semantic validation",
+  "script_sha256": "433ab46ecdae718bcabc8e6ec164113efeafa614f66a3a0ba470e3c15a7be20b"
+}

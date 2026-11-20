@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-09",
+  "scope": "CPU post-hoc query geometry only; no new model inference",
+  "effective_noise_rms": 0.430500461005187,
+  "local_lift": "x+t*v_source(x,0)",
+  "reference": "cached Heun32 learned-source trajectory on [0,.3]",
+  "rows": [
+    {
+      "time": 0.009375,
+      "zero_noise_query_error_rms": 0.003815668682138344,
+      "source_velocity_lift_error_rms": 0.0004817653827071501,
+      "error_reduction_factor": 7.9201802767505365,
+      "coordinate_identity_rms": 5.932374467096784e-17
+    },
+    {
+      "time": 0.01875,
+      "zero_noise_query_error_rms": 0.00730776830512052,
+      "source_velocity_lift_error_rms": 0.0018081188256360303,
+      "error_reduction_factor": 4.04164162305534,
+      "coordinate_identity_rms": 6.157750008753186e-17
+    },
+    {
+      "time": 0.0375,
+      "zero_noise_query_error_rms": 0.01463026473069327,
+      "source_velocity_lift_error_rms": 0.005889167165652563,
+      "error_reduction_factor": 2.4842671839952994,
+      "coordinate_identity_rms": 5.7567028058214e-17
+    },
+    {
+      "time": 0.075,
+      "zero_noise_query_error_rms": 0.0352653329606731,
+      "source_velocity_lift_error_rms": 0.014627916448509524,
+      "error_reduction_factor": 2.4108240626618,
+      "coordinate_identity_rms": 5.878512676359598e-17
+    },
+    {
+      "time": 0.15,
+      "zero_noise_query_error_rms": 0.08632927114910713,
+      "source_velocity_lift_error_rms": 0.03854144279787872,
+      "error_reduction_factor": 2.2399076132629525,
+      "coordinate_identity_rms": 5.117260145949098e-17
+    },
+    {
+      "time": 0.3,
+      "zero_noise_query_error_rms": 0.2019450001412511,
+      "source_velocity_lift_error_rms": 0.11184329964362234,
+      "error_reduction_factor": 1.805606601242354,
+      "coordinate_identity_rms": 5.9043430918987e-17
+    }
+  ],
+  "coordinate_ode_max_residual": 2.636779683484747e-16,
+  "image_edit_benefit_verified": false,
+  "uniform_model_error_bound_certified": false,
+  "input_sha256": {
+    "inputs.pt": "93c469d325ae3eaf72e57d9893c503aee870194fddfa01a0be683fb2e9a58fdb",
+    "source_paths.pt": "269cc313be8f697339087a832edfc7b6ab4b9e64129f49972dba3c03e5a74506"
+  },
+  "script_sha256": "6d98de39f6365ee3e09a58b99270409e9ee2b80f69f5381c35acbce67a73cb5a"
+}

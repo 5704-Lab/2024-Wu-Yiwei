@@ -1,0 +1,228 @@
+{
+  "date": "2026-10-22",
+  "scope": "finite_dimensional_algebra_signal_identities_and_counterexamples_only",
+  "no_model_experiments": true,
+  "seed": 20261022,
+  "python": "3.12.2",
+  "numpy": "1.26.4",
+  "script_sha256": "1fe45d35e11bb3cb611ca11d60f0f2c2c5f270cf666bfb8705016c3de628653b",
+  "check_groups": 27,
+  "all_passed": true,
+  "results": [
+    {
+      "name": "phase_velocity_identity",
+      "passed": true,
+      "metrics": {
+        "max_error": 7.707918747712483e-10
+      }
+    },
+    {
+      "name": "amplitude_velocity_identity",
+      "passed": true,
+      "metrics": {
+        "max_error": 2.8146292657682537e-09
+      }
+    },
+    {
+      "name": "radial_velocity_has_zero_phase_velocity",
+      "passed": true,
+      "metrics": {
+        "max_phase_velocity": 9.336021521662583e-17
+      }
+    },
+    {
+      "name": "static_mixture_reweighting_can_change_phase",
+      "passed": true,
+      "metrics": {
+        "radians": 0.3217505543966422,
+        "degrees": 18.43494882292201
+      }
+    },
+    {
+      "name": "complex_disk_phase_bound",
+      "passed": true,
+      "metrics": {
+        "max_violation": -0.00024401497271074601,
+        "tangent_gap": 2.220446049250313e-16
+      }
+    },
+    {
+      "name": "convex_sector_matches_angular_constraint",
+      "passed": true,
+      "metrics": {
+        "number_checked": 10000,
+        "disagreements": 0
+      }
+    },
+    {
+      "name": "positive_affine_change_preserves_non_dc_phase",
+      "passed": true,
+      "metrics": {
+        "max_error": 4.7337701770295486e-15
+      }
+    },
+    {
+      "name": "epsilon_normalization_loses_exact_gain_invariance",
+      "passed": true,
+      "metrics": {
+        "normalized_response_gap": 0.17365096204894837
+      }
+    },
+    {
+      "name": "weighted_phase_nuisance_elimination",
+      "passed": true,
+      "metrics": {
+        "absolute_error": 0.0
+      }
+    },
+    {
+      "name": "conditional_geometry_information_psd",
+      "passed": true,
+      "metrics": {
+        "eigenvalues": [
+          13.28121705949334,
+          17.823444158862404
+        ]
+      }
+    },
+    {
+      "name": "identifiable_geometry_recovery_after_nuisance",
+      "passed": true,
+      "metrics": {
+        "displacement_error": 9.995861419348e-16
+      }
+    },
+    {
+      "name": "appearance_geometry_overlap_is_unidentifiable",
+      "passed": true,
+      "metrics": {
+        "minimum_eigenvalue": -5.1697273447661e-16,
+        "unobservable_direction_residual": 8.130062465403937e-16
+      }
+    },
+    {
+      "name": "node_derived_phase_cycles_are_tautologies",
+      "passed": true,
+      "metrics": {
+        "max_cycle_error": 4.445768331151997e-16
+      }
+    },
+    {
+      "name": "relative_phase_graph_hides_common_phase",
+      "passed": true,
+      "metrics": {
+        "relative_graph_error": 2.2279875469573075e-16,
+        "absolute_change": 2.3756656972672476
+      }
+    },
+    {
+      "name": "single_carrier_translation_is_a_graph_gauge",
+      "passed": true,
+      "metrics": {
+        "relative_graph_error": 1.419135279966548e-15,
+        "anchored_phase_shift": 0.51
+      }
+    },
+    {
+      "name": "unrestricted_reaction_absorbs_any_transport",
+      "passed": true,
+      "metrics": {
+        "reconstruction_error": 1.5700924586837752e-16,
+        "reaction_difference": 2.0417781707624205
+      }
+    },
+    {
+      "name": "linear_strain_hides_infinitesimal_rigid_rotation",
+      "passed": true,
+      "metrics": {
+        "strain_norm": 0.0,
+        "rotation_gradient_norm": 0.5656854249492381
+      }
+    },
+    {
+      "name": "minimum_necessary_phase_closed_form",
+      "passed": true,
+      "metrics": {
+        "kkt_gap": 5.127164446973491e-17,
+        "task_progress": 0.35
+      }
+    },
+    {
+      "name": "zero_phase_task_feasibility_bound",
+      "passed": true,
+      "metrics": {
+        "maximum_progress": 1.0903979201344798,
+        "phase_residual": 9.335326988569946e-17
+      }
+    },
+    {
+      "name": "pure_phase_task_has_no_zero_phase_progress",
+      "passed": true,
+      "metrics": {
+        "nullspace_task_component": 3.5245209804025386e-16
+      }
+    },
+    {
+      "name": "singular_metric_minimum_phase_lower_bound",
+      "passed": true,
+      "metrics": {
+        "actual_cost": 0.022179369163677142,
+        "lower_bound": 0.022179369163677132
+      }
+    },
+    {
+      "name": "zero_source_gradient_does_not_protect_a_finite_step",
+      "passed": true,
+      "metrics": {
+        "linearized_loss_change": 0.0,
+        "actual_loss_change": 0.045
+      }
+    },
+    {
+      "name": "residual_tube_rejects_that_bad_step",
+      "passed": true,
+      "metrics": {
+        "residual_norm": 0.3,
+        "allowed_norm": 0.1
+      }
+    },
+    {
+      "name": "smooth_phase_finite_step_remainder_example",
+      "passed": true,
+      "metrics": {
+        "max_upper_bound_violation": -4.734592120568062e-09
+      }
+    },
+    {
+      "name": "high_snr_phase_variance_factor_two",
+      "passed": true,
+      "metrics": {
+        "empirical_variance": 4.23621965051181e-05,
+        "predicted_variance": 4.2603550295857986e-05,
+        "ratio": 0.9943348901895777
+      }
+    },
+    {
+      "name": "independent_phase_edits_can_leave_analysis_range",
+      "passed": true,
+      "metrics": {
+        "distance_from_consistent_range": 0.3412373417337965
+      }
+    },
+    {
+      "name": "small_increment_bound_does_not_bound_cumulative_drift",
+      "passed": true,
+      "metrics": {
+        "one_step_phase": 0.01,
+        "accumulated_phase": 0.5
+      }
+    }
+  ],
+  "limitations": [
+    "No VAE, DiT, diffusion, flow, or real image is evaluated.",
+    "Signal identities do not identify semantic necessity.",
+    "Nuisance and motion recovery use a correctly specified synthetic model.",
+    "The nonlinear Taylor example is not a neural-network Lipschitz certificate.",
+    "No final image quality or runtime improvement is established."
+  ]
+}

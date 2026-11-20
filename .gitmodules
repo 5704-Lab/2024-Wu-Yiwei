@@ -1,0 +1,3 @@
+[submodule "vendor/selfix"]
+	path = vendor/selfix
+	url = https://github.com/SeminKim/selfix.git

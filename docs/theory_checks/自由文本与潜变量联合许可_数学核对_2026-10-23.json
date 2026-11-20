@@ -1,0 +1,109 @@
+{
+  "passed": 18,
+  "total": 18,
+  "checks": [
+    {
+      "name": "left_bound_task_progress",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "preserve_other_entity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "preserve_unrequested_pose",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "same_state_different_text_different_permission",
+      "passed": true,
+      "metrics": {
+        "left_solution": [
+          0.6,
+          0.050000000000000044,
+          0.050000000000000044
+        ],
+        "right_solution": [
+          0.050000000000000266,
+          0.6,
+          0.050000000000000266
+        ]
+      }
+    },
+    {
+      "name": "global_score_can_prefer_forbidden_pose",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "same_text_state_dependent_task_jacobian",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "unreachable_fact_must_not_license_pose",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "individual_zero_response_not_unnecessary",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "joint_necessary_action_energy",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "known_nuisance_removed",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "pure_nuisance_proxy_exposes_no_task_evidence",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "robust_response_lower_bound",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "unconstrained_permission_gate_collapses",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "global_average_hides_local_error",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "tail_aggregation_keeps_sparse_error",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "reanchored_small_steps_do_not_preserve_source",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "minimum_necessary_phase_is_not_zero_phase",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "binding_is_not_identified_by_bag_of_words",
+      "passed": true,
+      "metrics": {}
+    }
+  ],
+  "scope": "known toy fact operators, no automatic parsing/binding or pretrained image verification",
+  "script_sha256": "db4232f0192a05fb9e2ea580e39f7a3f3b98259144ca94b241fefe4be5947fc5"
+}

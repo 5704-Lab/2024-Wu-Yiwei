@@ -1,0 +1,58 @@
+{
+  "retrieval_date": "2026-11-05",
+  "selection": "SelFix official FLUX.1-dev implementation, with both author editing defaults and a separately labeled high-fidelity inversion budget",
+  "claim_scope": "recent SOTA candidate with public method, code and reconstruction/editing evidence; not a claim of a unique globally best or chronologically newest editor",
+  "sources": [
+    {
+      "name": "SelFix",
+      "paper": "https://arxiv.org/html/2606.17584v1",
+      "code": "https://github.com/SeminKim/selfix",
+      "date": "2026-06-16",
+      "commit": "c549b2f934c8cde7d3ff46a020dc05422059d435",
+      "method": "Root selection through a straightness anchor, vanishing harmonic weight and decoupled fixed-point momentum; original FireFlow-style value injection for editing",
+      "evidence_read": ["method and finite-iteration limitations", "PIE-Bench reconstruction and editing tables", "Appendix E settings", "official reconstruction/editing YAML", "official solver and feature injection source"],
+      "choice": "selected; native FLUX weights already local and fully auditable"
+    },
+    {
+      "name": "SlerpFlow",
+      "paper": "https://arxiv.org/html/2607.21326v1",
+      "code": "https://github.com/0answer0/SlerpFlow",
+      "date": "2026-07-23",
+      "method": "Spherical correction of RF velocities with caching",
+      "evidence_read": ["reconstruction table", "editing and compute trade-off", "official repository overview"],
+      "choice": "reviewed; prioritise the fixed-point high-fidelity route for this test, not maximum first-order efficiency; paper scores across budgets are not directly comparable"
+    },
+    {
+      "name": "DirectEdit",
+      "paper": "https://arxiv.org/html/2605.02417v2",
+      "code": "https://github.com/Tr1stesse/DirectEdit",
+      "date": "2026-05-04",
+      "method": "Step-level source/reconstruction alignment with attention injection and multi-branch mask blending",
+      "evidence_read": ["paper method overview", "official repository provenance"],
+      "choice": "reviewed; different full preservation pipeline, not substituted by an incomplete hand-coded version"
+    },
+    {
+      "name": "SteerFlow",
+      "paper": "https://arxiv.org/html/2604.01715v1",
+      "date": "2026-04-02",
+      "method": "Amortised fixed-point inversion, source/target trajectory interpolation and adaptive masking",
+      "evidence_read": ["method overview", "FLUX/SD3.5 scope"],
+      "choice": "reviewed; current test prefers a pinned directly reusable public implementation"
+    },
+    {
+      "name": "FlashIn",
+      "paper": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_FlashIn_Fast_and_Accurate_Image_Inversion_for_Real-time_Image_Editing_CVPR_2026_paper.html",
+      "date": "2026-06",
+      "method": "Learned one-step inversion with cycle and adversarial training",
+      "evidence_read": ["official conference abstract"],
+      "choice": "reviewed; requires a different pretrained inversion network/backbone configuration"
+    },
+    {
+      "name": "FlowEdit",
+      "paper": "https://arxiv.org/html/2412.08629v1",
+      "local_code": "vendor/flowedit/FlowEdit_utils.py",
+      "method": "Source-anchored velocity difference under repeatedly sampled source noise; n_min=0 clean edit integration",
+      "choice": "rerun on the SAME native FLUX model and image resolution as SelFix"
+    }
+  ]
+}

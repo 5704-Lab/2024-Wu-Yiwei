@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-30",
+  "scope": "constructed finite-dimensional algebra only; no image/model validation",
+  "seed": 20261030,
+  "passed": 17,
+  "total": 17,
+  "checks": [
+    {
+      "name": "paired_input_difference",
+      "passed": true,
+      "error": 2.9010883917888854e-16
+    },
+    {
+      "name": "nonlinear_identity_residual_is_zero",
+      "passed": true,
+      "error": 0.0
+    },
+    {
+      "name": "full_noise_probe_erases_even_different_clean_images",
+      "passed": true,
+      "residual_at_tau_one": 0.0,
+      "clean_image_difference": 3.4328065838381097
+    },
+    {
+      "name": "paired_local_derivative",
+      "passed": true,
+      "relative_error": 4.2063899912010503e-10
+    },
+    {
+      "name": "positive_covariance_common_noise_example",
+      "passed": true,
+      "paired_variance": 1.8142419645722217e-24,
+      "independent_variance": 13.626567024347176
+    },
+    {
+      "name": "common_noise_not_universal_variance_reduction",
+      "passed": true,
+      "paired_to_independent_variance": 2.003567268063142
+    },
+    {
+      "name": "pooled_attention_permutation_blindness",
+      "passed": true,
+      "output_error": 2.309724214262959e-16
+    },
+    {
+      "name": "coordinates_expose_this_permutation",
+      "passed": true,
+      "centroid_difference": 0.05729432852121231
+    },
+    {
+      "name": "conditional_normalization_can_hide_no_image_support",
+      "passed": true,
+      "image_attention_mass": 7.440151952041672e-44,
+      "normalized_image_mass": 1.0
+    },
+    {
+      "name": "direction_allows_positive_length_change_detects_rotation",
+      "passed": true,
+      "stretch_error": 0.0,
+      "rotation_difference": 1.4142135623730951
+    },
+    {
+      "name": "restorative_quadratic_unique_solution",
+      "passed": true,
+      "stationarity_error": 8.232698622133304e-15
+    },
+    {
+      "name": "task_halfspace_kkt_solution",
+      "passed": true,
+      "stationarity_error": 7.71061090821021e-15,
+      "task_boundary_error": 0.0
+    },
+    {
+      "name": "scaling_a_qp_solution_can_break_task_constraint",
+      "passed": true,
+      "task_after_scaling": 0.19900743804199783,
+      "required_task": 0.9
+    },
+    {
+      "name": "current_residual_needed_to_repair_existing_error",
+      "passed": true,
+      "restorative_residual_ratio": 0.33333333333333337,
+      "derivative_only_residual_ratio": 1.0
+    },
+    {
+      "name": "conditional_controllability_gramian",
+      "passed": true,
+      "projector_error": 3.344518069468465e-15,
+      "minimum_eigenvalue": 0.07814472611386805
+    },
+    {
+      "name": "legal_projection_requires_conditional_identifiability",
+      "passed": true
+    },
+    {
+      "name": "nonzero_complex_response_phase_differential",
+      "passed": true,
+      "finite_difference_error": 1.9582625829957758e-10
+    }
+  ]
+}

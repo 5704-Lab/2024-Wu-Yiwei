@@ -1,0 +1,14 @@
+{
+  "original_v1_design_artifacts_unchanged": true,
+  "original_real_64_artifacts_unchanged": true,
+  "audit_cases": 11,
+  "audit_all_expected": true,
+  "v2_jobs": 432,
+  "v2_max_calls": 48348,
+  "added_development_main_jobs": 4,
+  "added_stability_jobs": 4,
+  "all_local_links_valid": true,
+  "new_image_model_forwards": 0,
+  "FLUX_solver_invertibility_certified": false,
+  "editing_quality_verified": false
+}

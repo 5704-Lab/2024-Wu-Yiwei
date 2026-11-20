@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-06",
+  "source_sha256": {
+    "src/correctflow/conditional_response.py": "2ba356595ce5dba3c6da6b2673e0568f4ce1ede8e73869368e42ff8d4d8dd5bc",
+    "src/correctflow/rank2_qp.py": "65b0a78623b3b599e8bd32002fae12e2456cbb94cc7b1d78fd2c366f2c736bad",
+    "experiments/stage1_revision/run.py": "a9dc9f52b3875ee5768d7809af13c474d26c375c536b41099eb98b9582d00135",
+    "experiments/stage1_revision/protocol.json": "255027f392877004522f0ceafd7e59c059afab5dbbecbedb4fff6d7edcc580e6",
+    "experiments/stage1_adaptive/run.py": "b81ed31948e60cb240c34b065235d434d48e03ec6794cc3547900b14c1e7cb3c",
+    "experiments/stage1_adaptive/protocol.json": "f8aade0f3c415e96a7625f215048fa890202ae5a4a0ff710338eecd27f368493",
+    "experiments/stage2_pilot/run.py": "820d4ce0a85b331b6ee906ad1901b72fe228d0c7c86e36f85f56629514a413ba",
+    "experiments/stage2_pilot/evaluate.py": "c6e235181d00bd6db8ce49dbec5fb395d9c246be9619890dc24c3d674a203b67",
+    "experiments/stage2_pilot/analyze.py": "6988b4910b43c978ad960f45081b3f0cdfdbeb41dc1ba26f0e474cc01c6424ec",
+    "experiments/stage2_pilot/protocol.json": "2ff95793e7e8792403e9617dbf96785b2afa22ff3b2b549e98dca338865f407a",
+    "experiments/stage2_pilot/inputs/manifest.json": "19956eee36bf9a02b2446f631ae23c2ca6e4df5132b1da37179ed54c1918a446",
+    "pretrained_models/siglip2-base-patch16-256/download_manifest.json": "0e31803f4dd90ce2f6291205a18291eba89aad52a06c665132c70926de4cb060"
+  },
+  "generator_weight_verification": "pretrained_models/sd3-medium/upstream_identity.json",
+  "data_provenance": "data/flowedit/provenance.json",
+  "model_weight_updates": 0,
+  "heldout_used": false
+}

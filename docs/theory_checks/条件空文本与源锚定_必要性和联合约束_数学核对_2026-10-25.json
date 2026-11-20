@@ -1,0 +1,272 @@
+{
+  "scope": "Exact identities, independent density derivatives and convex solves, and finite counterexamples only; no pretrained image experiments or natural-language binding validation.",
+  "seed": 20261025,
+  "passed": 47,
+  "total": 47,
+  "source_sha256": "51ff26e254d5bdd249b166ab5b4ba43ddb9940ee752dd08e310db87484b2f807",
+  "checks": [
+    {
+      "name": "six_query_decomposition",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "same_state_empty_cancels_from_target_source_contrast",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "asymmetric_cfg_exact_residual",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "same_text_asymmetric_cfg_is_not_no_edit",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "same_text_matched_cfg_initial_identity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "flowedit_query_is_not_forward_noise_of_current_y",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "query_effective_clean_coordinate",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "source_calibrated_prediction_is_exactly_flowedit",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "source_calibrated_empty_branch_feedback",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "calibrated_target_minus_empty_equals_condition_increment",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "source_calibration_zero_state_zero_condition_identity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "paired_calibration_cancels_common_bias",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "paired_calibration_does_not_cancel_state_dependent_bias",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "both_ends_empty_full_trajectory_is_trivially_identity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "empty_target_with_nonempty_source_is_not_a_no_edit_control",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "exact_gaussian_mixture_score_matches_density_derivative",
+      "passed": true,
+      "metrics": {
+        "max_error": 4.962361632721013e-10
+      }
+    },
+    {
+      "name": "rectified_velocity_score_identity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "conditional_empty_velocity_is_density_ratio_gradient",
+      "passed": true,
+      "metrics": {
+        "max_error": 3.019571415282217e-10
+      }
+    },
+    {
+      "name": "denoiser_difference_is_scaled_velocity_difference",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "posterior_covariance_equals_mean_susceptibility",
+      "passed": true,
+      "metrics": {
+        "max_error": 4.002952631908599e-10
+      }
+    },
+    {
+      "name": "posterior_fluctuations_determine_empty_velocity_jacobian",
+      "passed": true,
+      "metrics": {
+        "max_error": 9.513181353781874e-10
+      }
+    },
+    {
+      "name": "conditional_velocity_line_integral_recovers_fixed_time_log_ratio_change",
+      "passed": true,
+      "metrics": {
+        "error": 1.951563910473908e-17
+      }
+    },
+    {
+      "name": "exact_conditional_contrast_has_zero_fixed_time_circulation",
+      "passed": true,
+      "metrics": {
+        "circulation": 1.4094628242311558e-16
+      }
+    },
+    {
+      "name": "generic_learned_field_need_not_define_path_independent_semantic_energy",
+      "passed": true,
+      "metrics": {
+        "circulation": 6.283185307179586
+      }
+    },
+    {
+      "name": "even_exact_empty_posterior_does_not_reconstruct_each_source",
+      "passed": true,
+      "metrics": {
+        "reconstruction_error": 1.0
+      }
+    },
+    {
+      "name": "exact_empty_feedback_can_be_locally_repulsive",
+      "passed": true,
+      "metrics": {
+        "velocity_jacobian": -14.0
+      }
+    },
+    {
+      "name": "source_calibration_fixed_point_does_not_imply_stability",
+      "passed": true,
+      "metrics": {
+        "amplification": 1.139999146672128
+      }
+    },
+    {
+      "name": "branch_reweighting_cannot_create_missing_task_keep_direction",
+      "passed": true,
+      "metrics": {
+        "solver_status": 2
+      }
+    },
+    {
+      "name": "independent_source_restoration_direction_restores_feasibility",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "large_text_response_does_not_certify_necessity_of_pose",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "joint_minimum_change_qp_matches_independent_solver",
+      "passed": true,
+      "metrics": {
+        "solution_error": 7.698275767062065e-08
+      }
+    },
+    {
+      "name": "joint_qp_includes_restoring_already_nonzero_source_residual",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "task_keep_capacity_bound_matches_independent_optimization",
+      "passed": true,
+      "metrics": {
+        "progress_error": 4.773959005888173e-15
+      }
+    },
+    {
+      "name": "task_gradient_fully_in_keep_span_has_zero_compatible_capacity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "completion_minimum_change_uses_joint_not_coordinatewise_decisions",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "zero_excluded_from_both_phase_modes_at_strict_minimum_budget",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "each_mode_can_be_ablated_with_a_more_expensive_alternative",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "combining_individually_possible_deletions_can_destroy_goal",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "zeroing_a_branch_coefficient_is_not_zeroing_its_actual_effect",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "first_order_task_progress_can_miss_required_joint_change",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "finite_group_ablation_detects_joint_necessity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "short_horizon_can_retain_a_task_neutral_preparatory_change",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "removing_preparation_prevents_goal_in_same_horizon",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "paired_noise_difference_variance_identity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "common_random_numbers_need_not_reduce_variance",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "instantaneous_phase_response_respects_branch_sum",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "finite_phase_changes_cannot_be_added_branchwise",
+      "passed": true,
+      "metrics": {
+        "nonadditivity": 0.46364760900080615
+      }
+    }
+  ]
+}

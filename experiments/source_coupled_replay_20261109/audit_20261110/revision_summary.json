@@ -1,0 +1,14 @@
+{
+  "status": "reviewed_draft_no_models_executed",
+  "original_jobs": 424,
+  "revised_jobs": 432,
+  "added_main_jobs": 4,
+  "added_stability_jobs": 4,
+  "original_max_calls": 44448,
+  "revised_max_calls": 48348,
+  "added_max_calls": 3900,
+  "original_plan_unchanged": true,
+  "original_protocol_unchanged": true,
+  "genuinely_certified_FLUX_inverse_conditions": false,
+  "script_sha256": "7faf338af301618167fe17be0e475ef248a4c317a3a1559abbd301fbc449fcdd"
+}

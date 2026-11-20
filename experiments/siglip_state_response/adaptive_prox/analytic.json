@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "test": 0,
+      "solver_success": true,
+      "relative_solution_error": 1.4385993263176967e-07,
+      "stationarity": 0.0,
+      "feasible": true
+    },
+    {
+      "test": 1,
+      "solver_success": true,
+      "relative_solution_error": 1.2415052388089684e-09,
+      "stationarity": 0.0,
+      "feasible": true
+    },
+    {
+      "test": 2,
+      "solver_success": true,
+      "relative_solution_error": 1.9344552301608872e-07,
+      "stationarity": 0.0,
+      "feasible": true
+    },
+    {
+      "test": 3,
+      "solver_success": true,
+      "relative_solution_error": 3.741173977821151e-08,
+      "stationarity": 0.0,
+      "feasible": true
+    },
+    {
+      "test": 4,
+      "solver_success": true,
+      "relative_solution_error": 1.7906658176746257e-12,
+      "stationarity": 5.721958498152797e-17,
+      "feasible": true
+    },
+    {
+      "test": 5,
+      "solver_success": true,
+      "relative_solution_error": 2.3026782222160504e-18,
+      "stationarity": 1.1102230246251565e-16,
+      "feasible": true
+    },
+    {
+      "test": 6,
+      "solver_success": true,
+      "relative_solution_error": 1.5607198750347485e-07,
+      "stationarity": 1.1102230246251565e-16,
+      "feasible": true
+    },
+    {
+      "test": 7,
+      "solver_success": true,
+      "relative_solution_error": 1.8753440382005675e-09,
+      "stationarity": 0.0,
+      "feasible": true
+    }
+  ],
+  "zero_gradient_shrink": [
+    0.2,
+    -0.4
+  ],
+  "zero_zero_norm": 0.0,
+  "query_error": 2.220446049250313e-16,
+  "effective_velocity_error": 0.0
+}

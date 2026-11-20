@@ -1,0 +1,30 @@
+{
+  "config": {
+    "omega_min": 0.25,
+    "omega_max": 4.0,
+    "power": 2.0,
+    "gradient_rms_floor": 1e-08,
+    "gradient_norm_floor": 1e-08,
+    "gamma_ratio": 0.1,
+    "V_floor": 0.0,
+    "V_cap": 10000.0,
+    "local_lambdas": [
+      0.25,
+      1.0,
+      4.0
+    ],
+    "full_lambda": 1.0,
+    "seed": 0,
+    "shuffle_seed": 123,
+    "basis": "fixed latent coordinate",
+    "precision": "float32",
+    "full_methods": [
+      "G",
+      "ISO",
+      "ADAPT"
+    ],
+    "scope": "development mechanism diagnostic, not independent task quality or speed validation"
+  },
+  "code_sha256": "7b9dea816256dce06c5b3943a963361566a1a74f9088c8cd755854acfb182cad",
+  "stage": "local"
+}

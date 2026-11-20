@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-22",
+  "scope": "finite_dimensional_algebra_and_counterexamples_only",
+  "no_model_experiments": true,
+  "python": "3.12.2",
+  "numpy": "2.4.3",
+  "seed": 20261022,
+  "script_sha256": "0b585bad299aca4dbf9350071b1609f472626329cc02ec27bde74eca628020ca",
+  "check_groups": 18,
+  "all_passed": true,
+  "results": [
+    {
+      "name": "weighted_profile_equals_least_squares",
+      "passed": true,
+      "metrics": {
+        "absolute_error": 1.4210854715202004e-14
+      }
+    },
+    {
+      "name": "source_conditioned_operator_psd",
+      "passed": true,
+      "metrics": {
+        "minimum_eigenvalue": -1.4588040482954278e-15
+      }
+    },
+    {
+      "name": "affine_color_is_in_nullspace",
+      "passed": true,
+      "metrics": {
+        "residual": 1.6193365183738827e-14
+      }
+    },
+    {
+      "name": "constant_image_is_a_real_blind_spot",
+      "passed": true,
+      "metrics": {
+        "residual": 1.5007823980625453e-15
+      }
+    },
+    {
+      "name": "ramp_translation_blind_spot",
+      "passed": true,
+      "metrics": {
+        "residual": 8.070001989289239e-16
+      }
+    },
+    {
+      "name": "too_small_window_is_uninformative",
+      "passed": true,
+      "metrics": {
+        "residual": 7.303935484717797e-16
+      }
+    },
+    {
+      "name": "positive_gain_offset_phase_invariance",
+      "passed": true,
+      "metrics": {
+        "max_error": 3.898448201162683e-15
+      }
+    },
+    {
+      "name": "anchored_phase_detects_this_translation",
+      "passed": true,
+      "metrics": {
+        "mean_squared_phase_change": 2.0000000000000004
+      }
+    },
+    {
+      "name": "periodic_texture_translation_ambiguity",
+      "passed": true,
+      "metrics": {
+        "signal_difference": 4.987123766937036e-15
+      }
+    },
+    {
+      "name": "fixed_source_phase_penalizes_signal_erasure",
+      "passed": true,
+      "metrics": {
+        "erased_signal_loss": 0.9999999994456744
+      }
+    },
+    {
+      "name": "specified_common_factor_can_explain_raw_correlation",
+      "passed": true,
+      "metrics": {
+        "raw_correlation": 0.9858490904229977,
+        "residual_correlation": 0.11480129278662776
+      }
+    },
+    {
+      "name": "ols_residual_gram_identity",
+      "passed": true,
+      "metrics": {
+        "max_error": 5.066169705969514e-12
+      }
+    },
+    {
+      "name": "ridge_requires_r_transpose_r",
+      "passed": true,
+      "metrics": {
+        "shortcut_error": 1067.7281068274385
+      }
+    },
+    {
+      "name": "population_schur_complement_psd",
+      "passed": true,
+      "metrics": {
+        "minimum_eigenvalue": 1.4222921021865105
+      }
+    },
+    {
+      "name": "kkt_equals_nullspace_solution_12_cases",
+      "passed": true,
+      "metrics": {
+        "worst_difference": 1.1048595313719262e-15
+      }
+    },
+    {
+      "name": "linear_task_preservation_12_cases",
+      "passed": true,
+      "metrics": {
+        "worst_residual": 5.900916318210353e-16
+      }
+    },
+    {
+      "name": "linear_observation_descent_bound_12_cases",
+      "passed": true,
+      "metrics": {
+        "worst_bound_violation": -0.6739438929443806
+      }
+    },
+    {
+      "name": "full_conflict_can_give_zero_correction",
+      "passed": true,
+      "metrics": {
+        "correction_norm": 0.0
+      }
+    }
+  ],
+  "limitations": [
+    "No semantic identifiability or image-editing quality validation.",
+    "Fourier phase checks do not validate local filters on decoded images.",
+    "Synthetic common-factor removal uses a correctly specified nuisance.",
+    "No nonlinear finite-step or final-trajectory guarantee is tested."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "RADIUS": {
+      "radius": 0.6,
+      "low": false,
+      "disable_task": false
+    },
+    "LOW_FREQ": {
+      "radius": 0.6,
+      "low": true,
+      "disable_task": false
+    },
+    "LOW_NO_TASK": {
+      "radius": 0.6,
+      "low": true,
+      "disable_task": true
+    }
+  },
+  "pairs": [
+    "bear__00",
+    "brown_owl__00"
+  ],
+  "comparisons": "previous PERMIT .2 -> radius .6 -> low frequency -> no task floor",
+  "caution": "exploratory follow-up on two development images; no independent pose truth",
+  "code": {
+    "run.py": "dbf212b70b39dec613ea838e2de92d82673da86136be6bd3339f44a350f8778c",
+    "solver.py": "1dd0d726e8b96f2090b0d52bbfdc506515304ed56633d5925b16857167590a3a"
+  }
+}

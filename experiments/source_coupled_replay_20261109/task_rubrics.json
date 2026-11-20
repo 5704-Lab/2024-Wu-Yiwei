@@ -1,0 +1,217 @@
+{
+  "status": "prompt-checked design rubric; future ratings and calibration not performed",
+  "used_for_online_control": false,
+  "limitations": "These are task licenses and rating rules, not a semantic observer or universal guarantee.",
+  "rows": [
+    {
+      "pair_id": "bear__00",
+      "source_prompt": "A large brown bear walking through a stream of water. The stream appears to be shallow, as the bear is able to walk through it without any difficulty.",
+      "target_prompt": "A large black bear walking through a stream of water. The stream appears to be shallow, as the black bear is able to walk through it without any difficulty.",
+      "allowed_changes": [
+        "Brown bear to black bear; allow category-appropriate fur, ears and body morphology."
+      ],
+      "protected_factors": [
+        "Unrequested head/body pose, camera view, stream layout and background."
+      ],
+      "completion_rule": "A credible black-bear appearance, rather than only local darkening or colored artifacts.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "cat__00",
+      "source_prompt": "A small, fluffy kitten sitting in a grassy field. The kitten is positioned in the center of the scene, surrounded by a field. The kitten appears to be looking at something in the field.",
+      "target_prompt": "A small puppy sitting in a grassy field. The puppy is positioned in the center of the scene, surrounded by a field. The puppy appears to be looking at something in the field.",
+      "allowed_changes": [
+        "Kitten to small puppy; allow species-appropriate muzzle, ears and anatomy."
+      ],
+      "protected_factors": [
+        "Source-relative pose/view, position, surrounding objects and background."
+      ],
+      "completion_rule": "Recognizable small puppy with the original scene and pose relation retained.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "corgi__00",
+      "source_prompt": "A brown and white dog sitting on a dirt ground near a body of water. The dog appears to be enjoying the outdoors, possibly in a park. The dog is wearing a red collar. In the background, there are a few trees, providing a natural setting for the dog''s outdoor adventure.",
+      "target_prompt": "A brown and white dog made out of lego bricks sitting on a dirt ground near a body of water. The dog appears to be enjoying the outdoors, possibly in a park. The dog is wearing a red collar. In the background, there are a few trees, providing a natural setting for the dog''s outdoor adventure.",
+      "allowed_changes": [
+        "Corgi made of Lego bricks; allow blocky material and construction geometry."
+      ],
+      "protected_factors": [
+        "Dog pose/view and placement; unrelated scene/background."
+      ],
+      "completion_rule": "Clearly Lego construction while retaining the source animal pose and scene.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "bus__00",
+      "source_prompt": "A yellow van parked in front of a house, outside a garage. The van is of a classic model. The house has a brown exterior, and there is a tree nearby. There is a spare tire hanged between the headlights of the van.",
+      "target_prompt": "A SUV parked in front of a house, outside a garage. The SUV is of a modern model, possibly electric. The house has a brown exterior, and there is a tree nearby.",
+      "allowed_changes": [
+        "Classic van to modern SUV; allow category-appropriate structure and disappearance of van-specific spare tire."
+      ],
+      "protected_factors": [
+        "Parked pose/view, house/garage/tree and scene layout; report unrequested color changes separately."
+      ],
+      "completion_rule": "A modern SUV rather than the same van with texture changes; exact van silhouette is not required.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "bikes__00",
+      "source_prompt": "A bicycle parked on the sidewalk in front of a red brick building. The bicycle is positioned close to the door of the building, making it easily accessible for the owner. The building has a red brick exterior, giving it a distinctive appearance.",
+      "target_prompt": "A motorcycle parked on the sidewalk in front of a red brick building. The motorcycle is positioned close to the door of the building, making it easily accessible for the owner. The building has a red brick exterior, giving it a distinctive appearance.",
+      "allowed_changes": [
+        "Bicycle to motorcycle; allow engine, body, wheels and size changes needed by the category."
+      ],
+      "protected_factors": [
+        "Parked relationship, camera view, door/building and background scene."
+      ],
+      "completion_rule": "Credible motorcycle without wholesale scene replacement.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "butterfly__00",
+      "source_prompt": "A beautiful purple flower with a white and black butterfly perched on top of it. The butterfly is positioned towards the left side of the flower.",
+      "target_prompt": "A beautiful purple flower with an orange butterfly perched on top of it. The butterfly is positioned towards the right side of the flower.",
+      "allowed_changes": [
+        "Butterfly becomes orange.",
+        "Move butterfly from the left side of the flower to the right side as explicitly requested."
+      ],
+      "protected_factors": [
+        "Purple flower, source scene/view and unrelated background; do not protect the original butterfly position."
+      ],
+      "completion_rule": "Both orange appearance and the requested right-side placement; recoloring alone is partial.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "clown_fish__00",
+      "source_prompt": "A vibrant underwater scene with a clownfish swimming among various coral reefs. The clownfish is positioned towards the left side of the image, surrounded by a diverse array of coral and sea plants.",
+      "target_prompt": "A vibrant underwater scene with a goldfish swimming among various coral reefs. The goldfish is positioned towards the left side of the image, surrounded by a diverse array of coral and sea plants.",
+      "allowed_changes": [
+        "Clownfish to goldfish; allow species-appropriate fins and body shape."
+      ],
+      "protected_factors": [
+        "Unrequested swimming orientation/view, position and surrounding scene."
+      ],
+      "completion_rule": "Recognizable goldfish while keeping the source pose relation and scene.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "dog_snow__00",
+      "source_prompt": "A German Shepherd dog standing in a snowy field.",
+      "target_prompt": "A wooden sculpture of a dog standing in a snowy field.",
+      "allowed_changes": [
+        "Dog becomes a wooden sculpture; allow wood material and sculpture detail."
+      ],
+      "protected_factors": [
+        "Dog pose/view/placement and snow scene."
+      ],
+      "completion_rule": "Clear wooden sculpture rather than only a hue shift; action/pose is retained.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "iguana__00",
+      "source_prompt": "A large orange lizard sitting on a rock near the ocean. The lizard is positioned in the center of the scene, with the ocean waves visible in the background. The rock is located close to the water, providing a picturesque setting for the lizard''s resting spot.",
+      "target_prompt": "A large green lizard sitting on a rock near the ocean. The green lizard is positioned in the center of the scene, with the ocean waves visible in the background. The rock is located close to the water, providing a picturesque setting for the green lizard''s resting spot.",
+      "allowed_changes": [
+        "Orange iguana becomes green."
+      ],
+      "protected_factors": [
+        "Anatomy, pose/view, position and surrounding scene."
+      ],
+      "completion_rule": "Green iguana with no unrequested geometry or scene changes.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "parrot__00",
+      "source_prompt": "A colorful parrot perched on a tree branch. The parrot is predominantly blue, with a mix of red, green, and yellow colors. It sitting comfortably on the branch. The tree itself is filled with green leaves, creating a lush and vibrant backdrop for the parrot.",
+      "target_prompt": "A glass sculpture of a colorful parrot perched on a tree branch. The glass sculpture of the parrot is predominantly red, with a mix of blue, green, and yellow colors. It sitting comfortably on the branch. The tree itself is filled with green leaves, creating a lush and vibrant backdrop for the glass sculpture of the parrot.",
+      "allowed_changes": [
+        "Parrot becomes a glass sculpture.",
+        "Dominant blue becomes dominant red, retaining the other specified colors."
+      ],
+      "protected_factors": [
+        "Perched pose/view, branch and leafy backdrop; optical changes within glass are permitted."
+      ],
+      "completion_rule": "Both glass material and the specified dominant-color change; only one is partial.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "lighthouse__00",
+      "source_prompt": "The image features a tall white lighthouse standing prominently on a hill, with a beautiful blue sky in the background. The lighthouse is illuminated by a bright light, making it a prominent landmark in the scene.",
+      "target_prompt": "The image features a space rocket prominently on a hill, with a beautiful blue sky in the background. The space rocket is illuminated by a bright light, making it a prominent landmark in the scene.",
+      "allowed_changes": [
+        "Lighthouse becomes a space rocket; allow rocket-appropriate outline and structure."
+      ],
+      "protected_factors": [
+        "Source-relative placement and vertical layout, camera view and surrounding scene."
+      ],
+      "completion_rule": "A space rocket occupying the intended source role; exact lighthouse outline is not required.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "groceries__00",
+      "source_prompt": "A grocery list writing on a piece of brown paper with a black marker, which includes BREAD, EGGS, and MILK. The grocery list is attached to a wall or refrigerator with a magnet. The magnet is red and white, possibly in the shape of a phone booth in London.",
+      "target_prompt": "A grocery list writing on a piece of brown paper with a black marker, which includes BACON, BREAD, EGGS, and MILK. The grocery list is attached to a wall or refrigerator with a magnet. The magnet is red and white, possibly in the shape of a phone booth in London.",
+      "allowed_changes": [
+        "Add the readable word BACON to the grocery list."
+      ],
+      "protected_factors": [
+        "Keep readable BREAD, EGGS, MILK; brown paper, marker style, magnet and surrounding scene."
+      ],
+      "completion_rule": "BACON and all original requested list words are readable; random text-like strokes are failure.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "cake__00",
+      "source_prompt": "A three-layer cake with white frosting, placed on a wooden table. The cake is adorned with a variety of fruits. The cake is presented on a white plate.",
+      "target_prompt": "A three-layer cake with white frosting, placed on a wooden table. The cake is adorned with a variety of berries. The cake is presented on a white plate.",
+      "allowed_changes": [
+        "Replace unspecified fruit topping with berries."
+      ],
+      "protected_factors": [
+        "Cake body/presentation, camera view, placement and unrelated scene."
+      ],
+      "completion_rule": "Visible berry topping while preserving the cake and its scene.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "jump_kick__00",
+      "source_prompt": "A woman in a white uniform, kicking in the air. She appears to be in the middle of a karate kick, showcasing her skill and agility. The scene takes place outdoors, in a park.",
+      "target_prompt": "A shiny silver humanoid robot kicking in the air. It appears to be in the middle of a karate kick, showcasing its skill and agility. The scene takes place outdoors, in a park.",
+      "allowed_changes": [
+        "Woman becomes a shiny silver humanoid robot; allow robot anatomy and material."
+      ],
+      "protected_factors": [
+        "Jump-kick action, relative limb configuration/view and background; do not freeze exact human contours."
+      ],
+      "completion_rule": "Recognizable silver humanoid robot maintaining the jump-kick action.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "cat_and_dog__00",
+      "source_prompt": "A dog and a cat sitting together on a sidewalk. The dog is positioned on the left side of the scene, while the cat is on the right side. Both animals appear to be relaxed and enjoying each other''s company.",
+      "target_prompt": "A dog and a cat made out of lego sitting together on a sidewalk. The lego dog is positioned on the left side of the scene, while the lego cat is on the right side. Both animals appear to be relaxed and enjoying each other''s company.",
+      "allowed_changes": [
+        "Apply the requested Lego construction to the cat-and-dog subjects."
+      ],
+      "protected_factors": [
+        "Both subjects, their relative placement/pose/view and unrelated background."
+      ],
+      "completion_rule": "All subjects named by the target prompt have Lego appearance, not just one subject.",
+      "source_image_review_before_generation_required": true
+    },
+    {
+      "pair_id": "milk__00",
+      "source_prompt": "A glass of milk placed on a wooden table. The glass is filled with milk, and a straw is inserted into it.",
+      "target_prompt": "A glass of chocolate milk placed on a wooden table. The glass is filled with chocolate milk, and a straw is inserted into it.",
+      "allowed_changes": [
+        "Milk becomes chocolate milk; allow brown liquid appearance."
+      ],
+      "protected_factors": [
+        "Glass, straw, placement, camera view and wooden table."
+      ],
+      "completion_rule": "Chocolate milk is visible without replacing the glass/table/straw or changing the scene.",
+      "source_image_review_before_generation_required": true
+    }
+  ]
+}

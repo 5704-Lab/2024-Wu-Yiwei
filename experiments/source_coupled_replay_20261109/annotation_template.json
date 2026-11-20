@@ -1,0 +1,278 @@
+[
+  {
+    "pair_id": "bear__00",
+    "prompt_differences": [
+      {
+        "source": "brown",
+        "target": "black"
+      },
+      {
+        "source": "",
+        "target": "black"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "cat__00",
+    "prompt_differences": [
+      {
+        "source": "small, fluffy kitten",
+        "target": "small puppy"
+      },
+      {
+        "source": "kitten",
+        "target": "puppy"
+      },
+      {
+        "source": "kitten",
+        "target": "puppy"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "corgi__00",
+    "prompt_differences": [
+      {
+        "source": "",
+        "target": "made out of lego bricks"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "bus__00",
+    "prompt_differences": [
+      {
+        "source": "yellow van",
+        "target": "SUV"
+      },
+      {
+        "source": "van",
+        "target": "SUV"
+      },
+      {
+        "source": "classic model.",
+        "target": "modern model, possibly electric."
+      },
+      {
+        "source": "There is a spare tire hanged between the headlights of the van.",
+        "target": ""
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "bikes__00",
+    "prompt_differences": [
+      {
+        "source": "bicycle",
+        "target": "motorcycle"
+      },
+      {
+        "source": "bicycle",
+        "target": "motorcycle"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "butterfly__00",
+    "prompt_differences": [
+      {
+        "source": "a white and black",
+        "target": "an orange"
+      },
+      {
+        "source": "left",
+        "target": "right"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "clown_fish__00",
+    "prompt_differences": [
+      {
+        "source": "clownfish",
+        "target": "goldfish"
+      },
+      {
+        "source": "clownfish",
+        "target": "goldfish"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "dog_snow__00",
+    "prompt_differences": [
+      {
+        "source": "German Shepherd",
+        "target": "wooden sculpture of a"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "iguana__00",
+    "prompt_differences": [
+      {
+        "source": "orange",
+        "target": "green"
+      },
+      {
+        "source": "",
+        "target": "green"
+      },
+      {
+        "source": "",
+        "target": "green"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "parrot__00",
+    "prompt_differences": [
+      {
+        "source": "",
+        "target": "glass sculpture of a"
+      },
+      {
+        "source": "",
+        "target": "glass sculpture of the"
+      },
+      {
+        "source": "blue,",
+        "target": "red,"
+      },
+      {
+        "source": "red,",
+        "target": "blue,"
+      },
+      {
+        "source": "",
+        "target": "glass sculpture of the"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "lighthouse__00",
+    "prompt_differences": [
+      {
+        "source": "tall white lighthouse standing",
+        "target": "space rocket"
+      },
+      {
+        "source": "lighthouse",
+        "target": "space rocket"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "groceries__00",
+    "prompt_differences": [
+      {
+        "source": "",
+        "target": "BACON,"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "cake__00",
+    "prompt_differences": [
+      {
+        "source": "fruits.",
+        "target": "berries."
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "jump_kick__00",
+    "prompt_differences": [
+      {
+        "source": "woman in a white uniform,",
+        "target": "shiny silver humanoid robot"
+      },
+      {
+        "source": "She",
+        "target": "It"
+      },
+      {
+        "source": "her",
+        "target": "its"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "cat_and_dog__00",
+    "prompt_differences": [
+      {
+        "source": "",
+        "target": "made out of lego"
+      },
+      {
+        "source": "",
+        "target": "lego"
+      },
+      {
+        "source": "",
+        "target": "lego"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  },
+  {
+    "pair_id": "milk__00",
+    "prompt_differences": [
+      {
+        "source": "",
+        "target": "chocolate"
+      },
+      {
+        "source": "",
+        "target": "chocolate"
+      }
+    ],
+    "allowed_factors": "must be reviewed and frozen before generation",
+    "protected_factors": "all unrequested pose/view/layout/background changes, with prompt-specific exceptions",
+    "annotation_ready": false
+  }
+]

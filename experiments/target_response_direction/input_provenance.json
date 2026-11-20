@@ -1,0 +1,16 @@
+{
+  "source": "retained official FlowEdit trajectory snapshots",
+  "input_sha256": {
+    "experiments/stage1_full/inputs/bear__00.pt": "d4132a58ba85b3eeb919f0bc8b5c7b2a8dd18c6ad84c1c89aaabe730858a6d01",
+    "experiments/stage1_full/outputs/bear__00__seed0/states.pt": "5f592582a16ce7eae85cc754946780b9ff775e936184581ebf6452b14f02298f",
+    "experiments/stage1_full/inputs/brown_owl__00.pt": "23dbb3f694410e444bea91637b309e0f80d1bd8f70b143039a43c42a500fdff7",
+    "experiments/stage1_full/outputs/brown_owl__00__seed0/states.pt": "8e01f88622e445e3b086bd2a1e6337a13fa9cb4883eaea6d8c98b0fe7767588d",
+    "experiments/stage1_full/inputs/bus__00.pt": "5648b124ea019b35f1423238f3162c0c3eca9cbb977b935763139579b5c4193e",
+    "experiments/stage1_full/outputs/bus__00__seed0/states.pt": "9b645419600b0995171cd1f134f742a92ccd11b67cc4c72299362bc0ab23a7c8",
+    "experiments/stage1_full/inputs/cat_crown__00.pt": "070d49dde370034f6d481df81caff3aad681a00ef9be034aae6fa7ede149f65c",
+    "experiments/stage1_full/outputs/cat_crown__00__seed0/states.pt": "bd7b49c8da9fc13c515747605563474b0ad5bf898d0643602894cd995cf7cd84"
+  },
+  "model_metadata": "pretrained_models/sd3-medium/upstream_identity.json",
+  "weights_updated": false,
+  "data_updated": false
+}

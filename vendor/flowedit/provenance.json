@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/fallenshock/FlowEdit",
+  "commit": "2620a9364f0f9c21368c36266e6200ff250273ec",
+  "files": [
+    {
+      "path": "FlowEdit_utils.py",
+      "git_blob_sha": "1ef49b79c0945599f9b085ed1f57d972bc1aabc5",
+      "sha256": "9115a12b872d8dc46e099fac7d9fa946f31e65a170a5829662c9c99554004ac3"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha": "437829b12df2c805bd9c6cc22eaf2a1b6f7bb0fb",
+      "sha256": "ea0eb251d9d54eaaf1b2fb00a4a4960e391d5d40540c9c5445bd2ee401575b4b"
+    }
+  ]
+}

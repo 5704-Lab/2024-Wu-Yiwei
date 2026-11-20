@@ -1,0 +1,58 @@
+schema_version: 1
+research_date: "2026-10-30"
+status: design_only_not_a_validated_image_method
+model:
+  checkpoint: pretrained_models/sd3-medium
+  frozen: true
+  extra_trained_modules: false
+  extra_llm: false
+  inversion: false
+  spatial_edit_mask: false
+observer:
+  state: actual_clean_y
+  current_image: original_vae_decode_y
+  pairing: identical_sequence_pooled_condition_tau_noise_and_coordinates
+  layers_zero_based: [3, 11, 20]
+  probe_noise_levels: [0.20, 0.35]
+  control_noise_seeds: [19571030, 19571031]
+  audit_noise_seeds: [29571030, 29571031]
+  primary_facets: [image_attention_output_before_projection, text_attention_output_before_projection, readonly_concept_stream]
+  controls: [image_block_residual, normalized_query, normalized_key, value, post_adaln]
+  concept_query_modes: [source_anchored, dynamic]
+  preserve_original_forward_kernel: true
+  source_scale_updates_during_trajectory: false
+  cache_identity_required:
+    - source_latent_and_any_rgb_source_used
+    - model_weights_and_vae_latent_convention
+    - concept_bank_and_fact_normalization
+    - extraction_code_processor_backend_and_kernel
+  direction_encoding: source_relative_local_angle_or_group_l2_not_component_boxes
+semantic_scope:
+  first_protocol: [color_only, category_with_morphology, explicit_pose_change]
+  arbitrary_free_text_compiler: unresolved_requires_validation
+  runtime_oracle_reference: false
+  runtime_factor_truth: false
+  tolerances: require_locked_calibration_before_model_control
+controller:
+  reference_solver: controller_reference.py
+  unknown: positive_time_velocity
+  recovery: tolerance_plus_exp_minus_eta_h_times_current_violation
+  task_constraints: separate_evidence_channels_with_rate_floors
+  metric: fixed_positive_diagonal
+  implicit_slack: false
+  clip_solution_after_task_projection: false
+  trust_limits: velocities_not_constant_per_step_displacements
+  finite_nonlinear_acceptance: required
+  numerical_constraint_revalidation: required
+  solver_status_is_constraint_certificate: false
+  task_constraints_required_for_image_control: true
+  task_rate_floor_policy: unresolved_requires_state_dependent_validation
+integration:
+  preserve_original_time_grid_for_first_pilot: true
+  preserve_original_flowedit_noise_stream: true
+  rebuild_coupled_query_after_acceptance: true
+  conventional_sampling_tail: excluded_until_clean_state_definition_verified
+validation:
+  mathematical_array_checks: separate_from_semantic_model_tests
+  source_is_independent_unit: true
+  stages: [interface_parity, factual_selectivity, locked_calibration, short_repair, full_trajectories]

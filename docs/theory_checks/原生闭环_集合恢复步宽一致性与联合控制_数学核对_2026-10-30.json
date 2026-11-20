@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-30",
+  "scope": "constructed algebra and low-dimensional convex programs; no SD3 or image validation",
+  "passed": 30,
+  "total": 30,
+  "checks": [
+    {
+      "name": "valid_state_and_valid_raw_action_receive_no_extra_pull",
+      "passed": true,
+      "correction": 0.0
+    },
+    {
+      "name": "feasible_nominal_action_bypasses_solver_exactly",
+      "passed": true
+    },
+    {
+      "name": "inside_tube_boundary_filter_allows_nonzero_motion",
+      "passed": true,
+      "accepted_increment": 0.019999999998634912
+    },
+    {
+      "name": "positive_violation_contracts_to_nonzero_tolerance",
+      "passed": true,
+      "next_residual": 0.4274923012308469,
+      "target": 0.42749230123119275
+    },
+    {
+      "name": "negative_violation_contracts_symmetrically",
+      "passed": true
+    },
+    {
+      "name": "legal_morphology_direction_is_not_frozen",
+      "passed": true
+    },
+    {
+      "name": "repair_preserves_separate_edit_progress",
+      "passed": true,
+      "task_increment": 0.10000000000033493,
+      "repair_increment": -0.05438077407676289
+    },
+    {
+      "name": "minimum_constraint_equations",
+      "passed": true
+    },
+    {
+      "name": "virtual_work_zero_on_compatible_directions",
+      "passed": true,
+      "metric_virtual_work": 2.7755575615628914e-17
+    },
+    {
+      "name": "metric_pythagorean_minimum_control_energy",
+      "passed": true
+    },
+    {
+      "name": "inconsistent_equalities_not_silently_projected",
+      "passed": true
+    },
+    {
+      "name": "recovery_consistent_under_time_partition",
+      "passed": true,
+      "endpoints": [
+        0.1541341132112517,
+        0.15413411326229146,
+        0.15413411327405813
+      ],
+      "expected": 0.1541341132946451
+    },
+    {
+      "name": "small_step_rate_bound_uses_stable_exponential",
+      "passed": true,
+      "limiting_rate": -0.79999999992
+    },
+    {
+      "name": "fixed_per_step_source_penalty_has_no_fixed_rate_limit",
+      "passed": true,
+      "old_speeds": [
+        2.5,
+        25.0,
+        250.0
+      ],
+      "corrected_speeds": [
+        0.9063462346100907,
+        0.9900663346622349,
+        0.9990006663334666
+      ]
+    },
+    {
+      "name": "task_recovery_conflict_reported_infeasible",
+      "passed": true,
+      "status": "infeasible"
+    },
+    {
+      "name": "insufficient_action_budget_reported_infeasible",
+      "passed": true
+    },
+    {
+      "name": "joint_trust_constraint_avoids_post_projection_clipping",
+      "passed": true,
+      "accepted": [
+        0.08999999999396263,
+        0.17860571101595632
+      ],
+      "naively_clipped": [
+        0.01990074380419979,
+        0.19900743804199786
+      ]
+    },
+    {
+      "name": "relation_curvature_margin_controls_constructed_nonlinearity",
+      "passed": true,
+      "without_margin": 0.11000000000000001,
+      "with_margin": 0.09999999999597113
+    },
+    {
+      "name": "task_curvature_margin_protects_constructed_progress",
+      "passed": true,
+      "true_task_gain": 0.09000000000294898
+    },
+    {
+      "name": "kinematic_director_separates_axis_stretch_and_rotation",
+      "passed": true
+    },
+    {
+      "name": "shape_alignment_can_remove_protected_rotation",
+      "passed": true
+    },
+    {
+      "name": "conditional_identifiability_distinguishes_confounded_factor",
+      "passed": true
+    },
+    {
+      "name": "observer_change_causes_residual_change_without_state_motion",
+      "passed": true
+    },
+    {
+      "name": "zero_proxy_error_does_not_remove_semantic_bias",
+      "passed": true
+    },
+    {
+      "name": "finite_step_remainder_bound_n5",
+      "passed": true,
+      "actual": 0.13669853410658442,
+      "bound": 0.14633182545149348
+    },
+    {
+      "name": "finite_step_remainder_bound_n10",
+      "passed": true,
+      "actual": 0.1138149279558943,
+      "bound": 0.11585677566440056
+    },
+    {
+      "name": "finite_step_remainder_bound_n20",
+      "passed": true,
+      "actual": 0.10382088213031336,
+      "bound": 0.10429072125415902
+    },
+    {
+      "name": "finite_step_remainder_bound_n40",
+      "passed": true,
+      "actual": 0.0991670055939278,
+      "bound": 0.09927968338957643
+    },
+    {
+      "name": "finite_step_error_floor_decreases_with_step_width",
+      "passed": true,
+      "floors": [
+        0.04196383584095553,
+        0.01908022969026542,
+        0.009086183864684474,
+        0.004432307328298912
+      ]
+    },
+    {
+      "name": "zero_width_is_not_a_recovery_step",
+      "passed": true
+    }
+  ]
+}

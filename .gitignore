@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.venv/
+data/
+models/
+pretrained_models/
+experiments/**/outputs/
+experiments/**/*outputs*/
+experiments/**/logs/
+experiments/**/inputs/
+experiments/**/*.log

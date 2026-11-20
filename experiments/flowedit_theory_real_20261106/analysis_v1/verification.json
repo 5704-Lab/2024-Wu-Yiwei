@@ -1,0 +1,8 @@
+{
+  "analysis_checks_passed": true,
+  "analysis_script_matches": true,
+  "all_inputs_unchanged": true,
+  "all_original_64_artifacts_unchanged": true,
+  "all_local_links_exist": true,
+  "scope": "post-hoc CPU analysis; no new model inference"
+}

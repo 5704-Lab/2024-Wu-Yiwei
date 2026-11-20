@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-30",
+  "scope": "constructed numerical audit and modeling counterexamples; no image/model validation",
+  "controller_sha256_after": "9235749a75271c5cfc704f5cf35a64457ffb69de9ac3a530eaa499aeff1233dc",
+  "audit_checks_passed": 18,
+  "audit_checks_total": 18,
+  "prior_regression_passed": 30,
+  "prior_regression_total": 30,
+  "checks": [
+    {
+      "name": "feasible_weak_direction_is_retained",
+      "passed": true,
+      "correction": [
+        0.0,
+        1.0
+      ],
+      "equality_error": 0.0
+    },
+    {
+      "name": "orphan_task_floor_is_not_silently_ignored",
+      "passed": true,
+      "reason": "Task rate floors/curvatures require task_gradients"
+    },
+    {
+      "name": "orphan_task_curvature_is_not_silently_ignored",
+      "passed": true,
+      "reason": "Task rate floors/curvatures require task_gradients"
+    },
+    {
+      "name": "nonfinite_step_width_is_rejected",
+      "passed": true,
+      "reason": "step_width must be a finite positive scalar"
+    },
+    {
+      "name": "nonfinite_jacobian_is_rejected",
+      "passed": true,
+      "reason": "Invalid finite Jacobian shape"
+    },
+    {
+      "name": "matrix_shaped_residual_is_rejected",
+      "passed": true,
+      "reason": "residual must be a nonempty finite vector"
+    },
+    {
+      "name": "empty_observer_requires_explicit_caller_handling",
+      "passed": true,
+      "reason": "residual must be a nonempty finite vector"
+    },
+    {
+      "name": "nonfinite_metric_is_rejected",
+      "passed": true,
+      "reason": "metric_diagonal must be a nonempty finite vector"
+    },
+    {
+      "name": "inaccurate_status_does_not_bypass_relation_audit",
+      "passed": true
+    },
+    {
+      "name": "optimal_status_does_not_bypass_task_audit",
+      "passed": true
+    },
+    {
+      "name": "total_speed_is_audited_after_solver",
+      "passed": true
+    },
+    {
+      "name": "correction_speed_is_audited_after_solver",
+      "passed": true
+    },
+    {
+      "name": "actual_conic_solution_passes_all_local_audits",
+      "passed": true
+    },
+    {
+      "name": "independent_direction_boxes_are_coordinate_dependent",
+      "passed": true,
+      "original": [
+        -0.011228922063957758,
+        0.14943813247359922
+      ],
+      "rotated": [
+        -0.11360876377677541,
+        0.09772866990309585
+      ]
+    },
+    {
+      "name": "group_l2_direction_error_preserves_coordinate_rotation",
+      "passed": true
+    },
+    {
+      "name": "bounded_jacobian_alone_does_not_bound_inverse_feedback",
+      "passed": true,
+      "step_widths": [
+        0.1,
+        0.01,
+        0.001
+      ],
+      "increments": [
+        0.4710547807220001,
+        0.4974585617103432,
+        0.4997495835624209
+      ]
+    },
+    {
+      "name": "linearized_infeasibility_does_not_prove_nonlinear_unreachability",
+      "passed": true,
+      "nonlinear_gain": 0.010000000000000002,
+      "required_finite_gain": 0.001
+    },
+    {
+      "name": "prior_30_checks_still_pass",
+      "passed": true
+    }
+  ]
+}

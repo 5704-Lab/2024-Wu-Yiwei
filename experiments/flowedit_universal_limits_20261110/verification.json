@@ -1,0 +1,182 @@
+{
+  "scope": "CPU algebra/counterexamples only; no image or FLUX evidence",
+  "checks": 17,
+  "passed": 17,
+  "results": [
+    {
+      "name": "empty_success_intersection",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "unidentified_semantics",
+      "passed": true,
+      "evidence": {
+        "universal_bound": "nu(S1)+nu(S2)<=1; finite grid only checks arithmetic"
+      }
+    },
+    {
+      "name": "ideal_gaussian_mean_field_drifts",
+      "passed": true,
+      "evidence": {
+        "eigenvalues": [
+          0.6972243622680053,
+          4.302775637731995
+        ],
+        "mean_map": [
+          [
+            1.4949737275125574,
+            0.18493131053504866
+          ],
+          [
+            0.18493131053504863,
+            0.9401797959074114
+          ]
+        ],
+        "integral_order_difference": 1.1102230246251565e-15,
+        "independent_ode_error": 4.218847493575595e-15,
+        "source": [
+          1,
+          0
+        ],
+        "output": [
+          1.4949737275125574,
+          0.18493131053504863
+        ]
+      }
+    },
+    {
+      "name": "same_gaussian_task_has_preserving_exact_transport",
+      "passed": true,
+      "evidence": {
+        "transport": [
+          [
+            1.7320508075688772,
+            1.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "target_covariance": [
+          [
+            4.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "name": "vector_conditional_mean_and_covariance",
+      "passed": true,
+      "evidence": {
+        "max_identity_error": 0.0,
+        "removed_covariance_eigenvalues": [
+          0.11408881338404298,
+          78.88591118661596
+        ]
+      }
+    },
+    {
+      "name": "quadratic_one_step_identity",
+      "passed": true,
+      "evidence": {
+        "decrease": 12.315012500000005,
+        "predicted": 12.315012500000002
+      }
+    },
+    {
+      "name": "convex_one_step_inequality",
+      "passed": true,
+      "evidence": {
+        "gap": 3.650568655366726e-06
+      }
+    },
+    {
+      "name": "equal_budget_odd_case",
+      "passed": true,
+      "evidence": {
+        "field": "e",
+        "paired_variance": 0,
+        "iid_two_variance": 0.5
+      }
+    },
+    {
+      "name": "equal_budget_even_counterexample",
+      "passed": true,
+      "evidence": {
+        "field": "e^2-1",
+        "paired_variance": 2,
+        "iid_two_variance": 1
+      }
+    },
+    {
+      "name": "constant_mean_drift_not_removed",
+      "passed": true,
+      "evidence": {
+        "feasible_desired_increment": [
+          1,
+          0
+        ],
+        "preserved_wrong_increment": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "name": "multi_step_expectation_can_change",
+      "passed": true,
+      "evidence": {
+        "iid_single_endpoint_mean": 1,
+        "paired_endpoint_mean": 0,
+        "explanation": "E[e+e^2]=1 versus 0+0^2=0"
+      }
+    },
+    {
+      "name": "norm_preservation_not_distribution_preservation",
+      "passed": true,
+      "evidence": {
+        "transform": "abs(e)",
+        "original_mean": 0,
+        "transformed_mean": 0.7978845608028654
+      }
+    },
+    {
+      "name": "original_queries_frozen_state_and_four_calls",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "identical_full_conditions_identity",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "task_tangent_criterion",
+      "passed": true,
+      "evidence": {}
+    },
+    {
+      "name": "tangent_not_exact_finite_step_preservation",
+      "passed": true,
+      "evidence": {
+        "constraint_defect": 0.010000000000000009
+      }
+    },
+    {
+      "name": "semantic_threshold_need_not_improve",
+      "passed": true,
+      "evidence": {
+        "original_success": 0.5,
+        "paired_success": 0.0,
+        "note": "finite symmetric example; Gaussian version also has positive original success"
+      }
+    }
+  ]
+}

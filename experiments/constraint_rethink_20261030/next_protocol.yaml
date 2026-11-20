@@ -1,0 +1,59 @@
+schema_version: 1
+status: theory_candidate_not_implemented_or_admitted_to_image_control
+date: "2026-10-30"
+inputs:
+  source: fixed_original_rgb_and_scaled_original_vae_latent_with_separate_identity
+  state: actual_current_clean_y_and_original_vae_decode_y
+  task: fixed_source_target_text_and_explicit_restricted_factor_protocol
+  nominal_action: signed_original_flowedit_increment
+  positive_step_width: abs_t_next_minus_t
+model_limits:
+  frozen_original_sd3: true
+  extra_learned_modules: false
+  extra_llm: false
+  external_correct_target_at_runtime: false
+  inversion: false
+  spatial_update_mask: false
+observation:
+  paired_conditions: identical_prompt_noise_time_dtype_coordinates_for_source_and_current
+  conditions_to_compare: [shared_target_prompt, shared_source_prompt, optional_shared_empty_prompt_control]
+  keep: [full_spatial_O, context_token_spans_C, native_post_adaln_descriptor_control, normalized_Q_K_controls, attention_image_mass]
+  concept_B: uncertain_role_candidate_not_anatomical_coordinate
+  full_prompt_span_pooling_before_role_binding: false
+  post_adaln_equals_preprojection_O_space: false
+  normalization: fixed_source_statistics_or_explicitly_declared_contrast_invariance
+correspondence:
+  source_identity_fixed: true
+  current_descriptors_dynamic: true
+  task_permission_updates_from_current_errors: false
+  strong_same_pixel_prior_as_default: false
+  use_protected_pose_error_to_select_most_favorable_match: false
+  retain_multimodal_hypotheses: true
+  minimum_coverage: requires_validated_source_soft_role_weights_not_just_global_mass
+  near_optimal_plan_tolerance: requires_calibration_not_semantic_permission
+  quality_checks: [content_mismatch, position_prior_ablation, real_motion_tracking, independent_noise, cycle_consistency]
+  cycle_consistency_alone_certifies_semantics: false
+deformation:
+  candidates: [source_frame_translation, multi_point_local_polar_rotation, symmetric_stretch, cross_instance_roles]
+  source_neighborhood_rank: require_noncollinear_supported_points
+  discard_estimated_transform_after_alignment: false
+  all_local_polar_rotation_is_semantic_pose: false
+  all_stretch_is_legitimate: false
+  role_coverage_and_2d_3d_ambiguity: must_report
+controller:
+  objective: minimum_change_to_nominal_increment_with_positive_step_scaling
+  protected_semantic_tolerance: fixed_by_source_task_and_validation
+  uncertainty: requires_valid_error_bound_not_probe_variance_alone
+  sufficient_true_recovery: next_violation_upper_le_exp_minus_eta_h_times_current_violation_lower
+  uncertainty_overlap: unsupported_or_unknown_not_zero_violation
+  finite_acceptance: recompute_matching_relationships_task_and_decoded_image
+  detach_current_match_derivative: only_declared_inner_approximation_with_outer_full_acceptance
+  task_completion_reader: unresolved_requires_full_morphology_vs_color_only_and_role_negatives
+  arbitrary_free_text_scope_compiler: unresolved
+  loss_of_previously_supported_fact: terminate_coverage_claim_do_not_drop_row_silently
+validation:
+  existing_24_toy_sources: exploratory_not_new_independent_confirmation
+  new_sources_after_method_lock: required
+  calibration_unit: source_not_multiple_states
+  known_factor_truth: offline_only
+  stages: [descriptor_fidelity, source_correspondence, deformation_selectivity, task_evidence, short_joint_repair, full_trajectory_with_controls]

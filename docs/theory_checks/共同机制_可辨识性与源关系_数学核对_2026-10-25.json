@@ -1,0 +1,143 @@
+{
+  "scope": "Constructed mathematical checks only; no SD3 image quality or free-text binding validation.",
+  "seed": 20261025,
+  "script_sha256": "5ef8cbbd4485a7dde38172c24d8a3b456ec07e2d239c12cde2f8246c0957ba92",
+  "passed": 25,
+  "total": 25,
+  "checks": [
+    {
+      "name": "shared_mechanism_accepts_its_legal_direction",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "shared_mechanism_detects_declared_geometric_direction",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "independent_appearance_can_absorb_all_geometry",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "complementary_views_can_remove_a_declared_local_ambiguity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "repeating_same_relation_does_not_add_identifiable_dimensions",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "local_geometry_bound_holds_under_declared_bounded_error",
+      "passed": true,
+      "metrics": {
+        "actual_geometry_norm": 0.3,
+        "bound": 0.32524754878398204
+      }
+    },
+    {
+      "name": "unobservable_geometry_has_no_residual_based_magnitude_bound",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "schur_profile_equals_joint_quadratic_minimum",
+      "passed": true,
+      "metrics": {
+        "absolute_error": 0.0
+      }
+    },
+    {
+      "name": "profile_metric_is_symmetric_positive_semidefinite",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "profile_gradient_matches_finite_difference",
+      "passed": true,
+      "metrics": {
+        "max_error": 2.569539248042929e-09
+      }
+    },
+    {
+      "name": "ridge_remaining_is_not_an_orthogonal_projector",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "ridge_penalizes_some_legal_mechanism_change",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "regularization_does_not_supply_missing_data_rank",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "bounded_mechanism_requires_different_profile_solution",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "intrinsic_reflectance_shading_gauge_leaves_image_unchanged",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "restricted_metamorphosis_matches_declared_finite_image_family",
+      "passed": true,
+      "metrics": {
+        "max_error": 1.1436996349978301e-09
+      }
+    },
+    {
+      "name": "common_transport_reaction_predicts_phase_and_amplitude",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "geometry_fixed_appearance_can_require_phase_change",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "finite_joint_complex_residual_has_amplitude_phase_identity",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "sine_only_finite_phase_penalty_misses_pi_error",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "pairwise_distances_alone_cannot_protect_orientation",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "oriented_source_relations_detect_same_rotation",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "balanced_coupling_does_not_imply_unique_semantic_correspondence",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "image_mechanism_can_be_outside_local_decoder_range",
+      "passed": true,
+      "metrics": {}
+    },
+    {
+      "name": "zero_local_constraint_derivative_does_not_ensure_finite_feasibility",
+      "passed": true,
+      "metrics": {}
+    }
+  ]
+}
